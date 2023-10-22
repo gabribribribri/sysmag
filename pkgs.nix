@@ -10,7 +10,7 @@
             neovim
             firefox
             fish
-            obsidian
+            # obsidian # does not work.
             htop
 
         ];
