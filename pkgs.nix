@@ -10,9 +10,12 @@
             neovim
             firefox
             fish
-            # obsidian # does not work.
+            obsidian # does not work.
             htop
-
+            vencord
+            spotify
+            baobab
+            neofetch
         ];
 
     programs.steam.enable = true;

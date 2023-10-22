@@ -13,14 +13,14 @@
             # Other important things
             ./stuff.nix
 
-            # Set fish default shell
-            ./fish.nix
-
             # Include users configuration
             ./users.nix
 
             # Mars & Jupiter
             ./disks.nix
+
+            # Networking & Locales
+            ./nw.nix
 
         ];
 }
