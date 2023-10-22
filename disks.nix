@@ -7,9 +7,9 @@
         # options = [ "nofail" ];
     };
 
-    # fileSystems."/mnt/Jupiter" = {
-    #     device = "/dev/disk/by-uuid/3241de8b-34ee-487f-968f-439e3f6e3b0e";
-    #     fsType = "ext4";
-    #     # options = [ "nofail" ];
-    # };
+    fileSystems."/mnt/Jupiter" = {
+        device = "/dev/disk/by-uuid/df9d3a2e-3631-4ea5-8620-b3d1af45ef6c";
+        fsType = "ext4";
+        # options = [ "nofail" ];
+    };
 }

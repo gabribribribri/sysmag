@@ -14,4 +14,6 @@
             htop
 
         ];
+
+    programs.steam.enable = true;
 }
