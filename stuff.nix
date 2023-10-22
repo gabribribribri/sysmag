@@ -28,4 +28,8 @@
     users.defaultUserShell = pkgs.fish;
     # gaybe uses default
     users.users.gaybe.useDefaultShell = true;
+
+    # Allow experimental nix features
+    nix.settings.experimental-features = [ "nix-command" ];
+
 }

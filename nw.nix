@@ -1,7 +1,8 @@
 { config, pkgs, ...}:
 
 {
-    networking.hostName = "nixos"; # Define your hostname.
+    # Define your hostname.
+    networking.hostName = "nixos";
     
     networking.networkmanager.enable = true;
 

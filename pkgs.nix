@@ -3,16 +3,15 @@
 {
     environment.systemPackages = with pkgs;
         [
-        
+            (pkgs.discord.override {withOpenASAR = true;withVencord = true;})
             steam
             vscode
             git
             neovim
             firefox
             fish
-            obsidian # does not work.
+            obsidian 
             htop
-            vencord
             spotify
             baobab
             neofetch
