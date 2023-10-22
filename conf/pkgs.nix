@@ -3,7 +3,7 @@
 {
     environment.systemPackages = with pkgs;
         [
-            (pkgs.discord.override {withOpenASAR = true;withVencord = true;})
+            (pkgs.discord.override {withVencord = true;})
             steam
             vscode
             git
@@ -15,6 +15,7 @@
             spotify
             baobab
             neofetch
+            wget
         ];
 
     programs.steam.enable = true;

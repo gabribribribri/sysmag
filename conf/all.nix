@@ -22,5 +22,8 @@
             # Networking & Locales
             ./nw.nix
 
+            # Audio
+            ./sound.nix
+
         ];
 }
