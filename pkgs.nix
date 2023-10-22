@@ -1,4 +1,4 @@
-{ pkgs }:
+{ pkgs, config, ... }:
 
 {
     environment.systemPackages = with pkgs;
@@ -7,10 +7,11 @@
             steam
             vscode
             git
-            nvim
+            neovim
             firefox
             fish
             obsidian
+            htop
 
         ];
 }

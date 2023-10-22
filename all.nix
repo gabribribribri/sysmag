@@ -13,5 +13,8 @@
             # Other important things
             ./stuff.nix
 
+            # Set fish default shell
+            ./fish.nix
+
         ];
 }
