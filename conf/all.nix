@@ -25,5 +25,8 @@
             # Audio
             ./sound.nix
 
+            # Nvidia drivers configuration
+            ./drivers.nix
+
         ];
 }
