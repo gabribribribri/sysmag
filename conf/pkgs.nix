@@ -16,6 +16,7 @@
             baobab
             neofetch
             wget
+            prismlauncher
         ];
 
     programs.steam = {
