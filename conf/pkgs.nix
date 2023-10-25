@@ -10,14 +10,14 @@
             neovim
             firefox
             fish
-            obsidian 
+            obsidian
             htop
             spotify
             baobab
             neofetch
             wget
             prismlauncher
-            rustc
+            rustc cargo
         ];
 
     programs.steam = {
