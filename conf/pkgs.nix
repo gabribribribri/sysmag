@@ -17,6 +17,7 @@
             neofetch
             wget
             prismlauncher
+            rustc
         ];
 
     programs.steam = {
