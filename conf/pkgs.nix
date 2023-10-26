@@ -18,7 +18,14 @@
             wget
             prismlauncher
             rustc cargo
+            libreoffice-qt
+            xorg.xkbcomp
+
         ];
+        
+    nixpkgs.config.permittedInsecurePackages = [
+        "electron-24.8.6"
+    ];
 
     programs.steam = {
         enable = true;
