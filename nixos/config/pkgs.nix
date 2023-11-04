@@ -7,7 +7,7 @@
             steam
             vscode
             git
-            neovim
+            helix
             firefox
             fish
             obsidian
@@ -20,7 +20,14 @@
             rustc cargo
             libreoffice-qt
             xorg.xkbcomp
-
+            vlc
+            libsForQt5.kfind
+            
+            # lunarvim dependencies
+            gnumake
+            python311Packages.pip
+            python3Full
+            nodejs_20
         ];
         
     nixpkgs.config.permittedInsecurePackages = [
