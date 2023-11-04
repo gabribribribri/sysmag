@@ -10,6 +10,9 @@
             # Packages
             ./pkgs.nix
 
+            # Packages configuration
+            ./pkgsconf.nix
+
             # Other important things
             ./stuff.nix
 

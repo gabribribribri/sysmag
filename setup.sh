@@ -7,4 +7,4 @@ chmod +x nixos/init_altgr-weur.sh nixos/rebuild-switch.sh nixos/rebuild-test.sh
 
 # Create config files symlinks
 ln -s $HOME/sysmag/config/helix/config.toml $HOME/.config/helix/config.toml # Helix config
-ln -s $HOME/sysmag/config/tmux/.tmux.conf $HOME/.tmux.conf
+# ln -s $HOME/sysmag/config/tmux/.tmux.conf $HOME/.tmux.conf # Tmux config
