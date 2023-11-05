@@ -9,7 +9,7 @@
             git lazygit
             helix tmux
             firefox
-            fish
+            zsh
             obsidian
             htop
             spotify

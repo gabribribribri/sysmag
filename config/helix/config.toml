@@ -1,9 +1,9 @@
-theme = "fleet_dark"
+theme = "base16_transparent"
 
 [editor]
 middle-click-paste = false
 line-number = "absolute"
-mouse = true
+mouse = false
 true-color = true
 idle-timeout = 0
 bufferline = "always"
