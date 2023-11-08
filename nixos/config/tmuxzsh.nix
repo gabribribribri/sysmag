@@ -12,7 +12,10 @@
       syntaxHighlighting = {
         enable = true;
         highlighters = [ "main" "brackets" "pattern" "cursor" "regexp" "root" "line" ];
-        styles = { "alias" = "fg=magenta,bold"; };
+        styles = { 
+          "alias" = "fg=magenta,bold"; 
+          "path" = "fg=cyan"
+        };
       };
       autosuggestions = {
         enable = true;

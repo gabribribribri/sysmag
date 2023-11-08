@@ -7,9 +7,8 @@
             steam
             vscode
             git lazygit
-            helix tmux
+            helix tmux zsh alacritty
             firefox
-            zsh
             obsidian
             htop
             spotify
