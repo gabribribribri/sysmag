@@ -7,7 +7,7 @@
             steam
             vscode
             git lazygit
-            helix tmux zsh alacritty
+            helix tmux zsh kitty
             firefox
             obsidian
             htop
@@ -17,18 +17,13 @@
             wget
             prismlauncher
             rustc cargo rust-analyzer
+            dart
             libreoffice-qt
             xorg.xkbcomp
             vlc
             libsForQt5.kfind
             xplr
-            
-            # lunarvim dependencies
-            gnumake
-            python311Packages.pip
-            python3Full
-            nodejs_20
-            neovim
+  
         ];
         
 }

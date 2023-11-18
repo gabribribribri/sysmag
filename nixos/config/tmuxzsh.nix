@@ -8,13 +8,15 @@
       enable = true;
 			shellAliases = {
 				nrs = "$HOME/sysmag/nixos/rebuild-switch.sh";
+        lg  = "lazygit";
+        ns  = "nix-shell --run zsh";
       };
       syntaxHighlighting = {
         enable = true;
         highlighters = [ "main" "brackets" "pattern" "cursor" "regexp" "root" "line" ];
         styles = { 
           "alias" = "fg=magenta,bold"; 
-          "path" = "fg=cyan"
+          "path" = "fg=cyan";
         };
       };
       autosuggestions = {
