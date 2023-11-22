@@ -7,7 +7,7 @@
     programs.zsh = {
       enable = true;
 			shellAliases = {
-				nrs = "$HOME/sysmag/nixos/rebuild-switch.sh";
+				nrs = "$HOME/sysmag/hades/rebuild-switch.sh";
         lg  = "lazygit";
         ns  = "nix-shell --run zsh";
       };

@@ -22,8 +22,8 @@
             xorg.xkbcomp
             vlc
             libsForQt5.kfind
-            xplr
-  
+            nnn
+            clang-tools_16
         ];
         
 }

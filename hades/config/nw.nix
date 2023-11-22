@@ -2,7 +2,7 @@
 
 {
     # Define your hostname.
-    networking.hostName = "nixos";
+    networking.hostName = "hades";
     
     networking.networkmanager.enable = true;
 

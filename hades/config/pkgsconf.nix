@@ -2,7 +2,7 @@
 
 {
     # Workspace configuration
-    imports = [ ./tmuxzsh.nix ];
+    imports = [ /home/gaybe/sysmag/config/nix/kzth.nix ];
     
 		# Unsecure packages permitted
     nixpkgs.config.permittedInsecurePackages = [
