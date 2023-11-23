@@ -12,6 +12,9 @@
             # Classic Workflow
             firefox obsidian spotify
 
+            # Awesome pkgs
+            arandr
+            
             # Languages
             rustc cargo rust-analyzer
             dart
