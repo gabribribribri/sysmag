@@ -10,9 +10,6 @@
         # Enable the X11 windowing system.
         enable = true;
 
-        # Enable the KDE Plasma Desktop Environment.
-        desktopManager.plasma5.enable = true;
-
         # Enable Awesome WM
         windowManager.awesome = {
             enable = true;
@@ -22,7 +19,14 @@
               ];
         };
 
-        displayManager.sddm.enable = true;
+        displayManager = {
+            defaultSession = "none+awesome";
+            sddm.enable = true;
+            autoLogin = {
+                enable = true;
+                user = "gaybe";
+            };
+        };
     };
 
 

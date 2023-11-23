@@ -13,7 +13,8 @@
             firefox obsidian spotify
 
             # Awesome pkgs
-            arandr
+            arandr nitrogen
+            rofi mpc-cli
             
             # Languages
             rustc cargo rust-analyzer

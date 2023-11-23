@@ -8,3 +8,4 @@ chmod +x hades/init_altgr-weur.sh hades/rebuild-switch.sh hades/rebuild-test.sh
 # Create config files symlinks
 ln -s $HOME/sysmag/config/helix/ $HOME/.config/ # Helix config
 ln -s $HOME/sysmag/config/awesome $HOME/.config/ # Awesome config
+ln -s $HOME/sysmag/config/kitty $HOME/.config/ # Kitty config

@@ -7,12 +7,4 @@
         extraGroups = [ "networkmanager" "wheel" ];
     };
 
-    # Enable automatic login for the user.
-    services.xserver.displayManager = {
-        autoLogin = {
-            # enable = true;
-            enable = false;
-            user = "gaybe";
-        };
-    };
 }

@@ -290,10 +290,10 @@ globalkeys = mytable.join(
               {description = "go back", group = "tag"}),
 
     -- Non-empty tag browsing
-    awful.key({ altkey }, "Left", function () lain.util.tag_view_nonempty(-1) end,
-              {description = "view  previous nonempty", group = "tag"}),
-    awful.key({ altkey }, "Right", function () lain.util.tag_view_nonempty(1) end,
-              {description = "view  previous nonempty", group = "tag"}),
+    -- awful.key({ altkey }, "Left", function () lain.util.tag_view_nonempty(-1) end,
+    --           {description = "view  previous nonempty", group = "tag"}),
+    -- awful.key({ altkey }, "Right", function () lain.util.tag_view_nonempty(1) end,
+    --           {description = "view  previous nonempty", group = "tag"}),
 
     -- Default client focus
     awful.key({ altkey,           }, "j",
@@ -832,8 +832,11 @@ tag.connect_signal("property::selected", backham)
 
 
 -- change keyboard layout to altgr-weur
-awful.spawn.with_shell("xkbcomp -w 0 -I$HOME/sysmag/hades/xkb $HOME/sysmag/hades/xkb/map $DISPLA")
+awful.spawn.with_shell("xkbcomp -w 0 -I$HOME/sysmag/hades/xkb $HOME/sysmag/hades/xkb/map $DISPLAY")
 
 -- setup monitors geometry
 awful.spawn.with_shell("xrandr --output DP-0 --mode 1920x1080 --pos 0x0 --rotate right --output DP-1 --off --output HDMI-0 --off --output DP-2 --off --output DP-3 --off --output DP-4 --primary --mode 1920x1080 --pos 1080x660 --rotate normal --output DP-5 --off")
+
+-- setup wallpaper
+awful.spawn.with_shell("nitrogen --restore")
 

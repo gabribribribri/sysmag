@@ -316,41 +316,36 @@ function theme.at_screen_connect(s)
         },
         s.mytasklist, -- Middle widget
         { -- Right widgets
+
             layout = wibox.layout.fixed.horizontal,
             wibox.widget.systray(),
-            keyboardlayout,
             spr,
             arrl_ld,
+
             wibox.container.background(mpdicon, theme.bg_focus),
             wibox.container.background(theme.mpd.widget, theme.bg_focus),
+
             arrl_dl,
             volicon,
             theme.volume.widget,
             arrl_ld,
-            wibox.container.background(mailicon, theme.bg_focus),
-            --wibox.container.background(theme.mail.widget, theme.bg_focus),
+
+            wibox.container.background(memicon, theme.bg_focus),
+            wibox.container.background(mem.widget, theme.bg_focus),
+
             arrl_dl,
-            memicon,
-            mem.widget,
+            cpuicon,
+            cpu.widget,
             arrl_ld,
-            wibox.container.background(cpuicon, theme.bg_focus),
-            wibox.container.background(cpu.widget, theme.bg_focus),
-            arrl_dl,
-            tempicon,
-            temp.widget,
-            arrl_ld,
-            wibox.container.background(fsicon, theme.bg_focus),
-            --wibox.container.background(theme.fs.widget, theme.bg_focus),
-            arrl_dl,
-            baticon,
-            bat.widget,
-            arrl_ld,
+
             wibox.container.background(neticon, theme.bg_focus),
             wibox.container.background(net.widget, theme.bg_focus),
+
             arrl_dl,
             clock,
             spr,
             arrl_ld,
+
             wibox.container.background(s.mylayoutbox, theme.bg_focus),
         },
     }
