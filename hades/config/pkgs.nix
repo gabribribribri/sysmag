@@ -3,27 +3,34 @@
 {
     environment.systemPackages = with pkgs;
         [
-            (pkgs.discord.override {withVencord = true;})
-            steam
-            vscode
-            git lazygit
+        
+            # Code Workflow
+            git lazygit nnn
             helix tmux zsh kitty
-            firefox
-            obsidian
-            htop
-            spotify
-            baobab
-            neofetch
-            wget
-            prismlauncher
+            vscode
+
+            # Classic Workflow
+            firefox obsidian spotify
+
+            # Languages
             rustc cargo rust-analyzer
             dart
+            lua lua-language-server
+            clang-tools_16
+
+            # Showing off
+            htop cmatrix neofetch
+
+            # Gaming
+            steam prismlauncher
+            (pkgs.discord.override {withVencord = true;})
+
+            # Reste
+            baobab wget
             libreoffice-qt
             xorg.xkbcomp
             vlc
             libsForQt5.kfind
-            nnn
-            clang-tools_16
         ];
         
 }
