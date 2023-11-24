@@ -12,9 +12,9 @@
             # Classic Workflow
             firefox obsidian spotify
 
-            # Awesome pkgs
+            # Awesome WM pkgs
             arandr nitrogen
-            rofi mpc-cli
+            rofi rofimoji # libqalculate rofi-calc
             
             # Languages
             rustc cargo rust-analyzer
@@ -36,5 +36,9 @@
             vlc
             libsForQt5.kfind
         ];
-        
+
+    fonts.packages = with pkgs;
+        [
+            (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
+        ];
 }
