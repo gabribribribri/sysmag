@@ -14,7 +14,7 @@
 
             # Awesome WM pkgs
             arandr nitrogen
-            rofi rofimoji # libqalculate rofi-calc
+            rofi # libqalculate rofi-calc
             
             # Languages
             rustc cargo rust-analyzer
@@ -34,6 +34,7 @@
             libreoffice-qt
             xorg.xkbcomp
             vlc
+            gnome.gnome-screenshot
             libsForQt5.kfind
         ];
 

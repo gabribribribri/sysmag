@@ -271,8 +271,8 @@ globalkeys = mytable.join(
               {description = "destroy all notifications", group = "hotkeys"}),
     -- Take a screenshot
     -- https://github.com/lcpz/dots/blob/master/bin/screenshot
-    awful.key({ altkey }, "p", function() os.execute("screenshot") end,
-              {description = "take a screenshot", group = "hotkeys"}),
+    awful.key({ modkey }, "p", function() awful.spawn.with_shell("gnome-screenshot --interactive") end,
+              {description = "run gnome-screenshot", group = "launcher"}),
 
     -- X screen locker
     awful.key({ altkey, "Control" }, "l", function () os.execute(scrlocker) end,
@@ -551,7 +551,7 @@ globalkeys = mytable.join(
     awful.key({ modkey }, "r", function () awful.screen.focused().mypromptbox:run() end,
               {description = "run prompt", group = "launcher"}),
 
-    awful.key({ altkey}, "space", function() os.execute("rofi -show combi -combi-modes \"window,run,drun,emoji:rofimoji\" -modes combi") end,
+    awful.key({ altkey}, "space", function() os.execute("rofi -show combi -combi-modes \"window,drun") end,
               {description = "run rofi", group = "launcher"}),
 
     awful.key({ modkey }, "x",
@@ -836,10 +836,19 @@ tag.connect_signal("property::selected", backham)
 
 
 -- change keyboard layout to altgr-weur
-awful.spawn.with_shell("xkbcomp -w 0 -I$HOME/sysmag/hades/xkb $HOME/sysmag/hades/xkb/map $DISPLAY")
+os.execute("xkbcomp -w 0 -I$HOME/sysmag/hades/xkb $HOME/sysmag/hades/xkb/map $DISPLAY")
 
 -- setup monitors geometry
-awful.spawn.with_shell("xrandr --output DP-0 --mode 1920x1080 --pos 0x0 --rotate right --output DP-1 --off --output HDMI-0 --off --output DP-2 --off --output DP-3 --off --output DP-4 --primary --mode 1920x1080 --pos 1080x660 --rotate normal --output DP-5 --off")
+os.execute(
+    "xrandr --output DP-0 --mode 1920x1080 --pos 0x0 --rotate right " ..
+           "--output DP-1 --off " ..
+           "--output HDMI-0 --off " ..
+           "--output DP-2 --off " ..
+           "--output DP-3 --off " ..
+           "--output DP-4 --primary --mode 1920x1080 --refresh 164.92 --pos 1080x660 --rotate normal " ..
+           "--output DP-5 --off "
+)
+
 
 -- setup wallpaper
 awful.spawn.with_shell("nitrogen --restore")
