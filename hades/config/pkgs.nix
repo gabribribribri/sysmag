@@ -17,6 +17,7 @@
             rofi # libqalculate rofi-calc
             
             # Languages
+            python3
             rustc cargo rust-analyzer
             dart
             lua lua-language-server
@@ -36,6 +37,7 @@
             vlc
             gnome.gnome-screenshot
             libsForQt5.kfind
+            libsForQt5.gwenview
         ];
 
     fonts.packages = with pkgs;

@@ -9,7 +9,6 @@
 			shellAliases = {
 				nrs = "$HOME/sysmag/hades/rebuild-switch.sh";
         lg  = "lazygit";
-        ns  = "nix-shell --run zsh";
       };
       syntaxHighlighting = {
         enable = true;

@@ -394,7 +394,10 @@ globalkeys = mytable.join(
               {description = "delete tag", group = "tag"}),
 
     -- Standard program
-    awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
+    awful.key({ modkey,           }, "Return",
+              function ()
+                  awful.spawn(terminal)
+              end,
               {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
@@ -551,7 +554,7 @@ globalkeys = mytable.join(
     awful.key({ modkey }, "r", function () awful.screen.focused().mypromptbox:run() end,
               {description = "run prompt", group = "launcher"}),
 
-    awful.key({ altkey}, "space", function() os.execute("rofi -show combi -combi-modes \"window,drun") end,
+    awful.key({ altkey}, "space", function() os.execute("rofi -show combi -combi-modes \"window,drun\" -modes combi") end,
               {description = "run rofi", group = "launcher"}),
 
     awful.key({ modkey }, "x",
