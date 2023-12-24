@@ -9,5 +9,5 @@ chmod +x hades/init_altgr-weur.sh hades/rebuild-switch.sh hades/rebuild-test.sh
 symApps=("helix" "awesome" "kitty" "rofi")
 
 for app in "${symApps[@]}"; do
-  ln -s $HOME/sysmag/config/$app $HOMME/.config/
+  ln -s $HOME/sysmag/config/$app $HOME/.config/
 done

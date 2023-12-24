@@ -1,6 +1,7 @@
 { config, pkgs, ...}:
 
 {
+
     # Workspace configuration
     imports = [ /home/gaybe/sysmag/config/nix/kzth.nix ];
     
