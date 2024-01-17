@@ -11,3 +11,6 @@ symApps=("helix" "awesome" "kitty" "rofi")
 for app in "${symApps[@]}"; do
   ln -s $HOME/sysmag/config/$app $HOME/.config/
 done
+
+# ZSH Config
+ln -s $HOME/sysmag/config/zsh/.zshrc $HOME/
