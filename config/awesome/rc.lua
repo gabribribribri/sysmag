@@ -18,8 +18,9 @@ local wibox         = require("wibox")
 local beautiful     = require("beautiful")
 local naughty       = require("naughty")
 local lain          = require("lain")
---local menubar       = require("menubar")
-local freedesktop   = require("freedesktop")
+-- local menubar       = require("menubar")
+    -- FREEDESKTOP BUG
+-- local freedesktop   = require("freedesktop")
 local hotkeys_popup = require("awful.hotkeys_popup")
                       require("awful.hotkeys_popup.keys")
 local mytable       = awful.util.table or gears.table -- 4.{0,1} compatibility
@@ -104,13 +105,13 @@ local terminal     = "kitty"
 local vi_focus     = false -- vi-like client focus https://github.com/lcpz/awesome-copycats/issues/275
 local cycle_prev   = true  -- cycle with only the previously focused client or all https://github.com/lcpz/awesome-copycats/issues/274
 local editor       = os.getenv("EDITOR") or "nvim"
-local browser      = "firefox"
+local browser      = "firefox" -- commmand to start floorp
 
 awful.util.terminal = terminal
 awful.util.tagnames = { "1", "2", "3", "4", "5" }
 awful.layout.layouts = {
     awful.layout.suit.tile.right, --Default
-    awful.layout.suit.floating,
+    -- awful.layout.suit.floating,
     -- awful.layout.suit.tile,
     -- awful.layout.suit.tile.left,
     -- awful.layout.suit.tile.bottom,
@@ -174,6 +175,9 @@ awful.util.tasklist_buttons = mytable.join(
 
 beautiful.init(string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), chosen_theme))
 
+-- change the font
+beautiful.font = "DejaVu Sans 9"
+
 -- }}}
 
 -- {{{ Menu
@@ -187,16 +191,17 @@ local myawesomemenu = {
    { "Quit", function() awesome.quit() end },
 }
 
-awful.util.mymainmenu = freedesktop.menu.build {
-    before = {
-        { "Awesome", myawesomemenu, beautiful.awesome_icon },
-        -- other triads can be put here
-    },
-    after = {
-        { "Open terminal", terminal },
-        -- other triads can be put here
-    }
-}
+    -- FREEDESKTOP BUG ??
+-- awful.util.mymainmenu = menu.build {
+--     before = {
+--         { "Awesome", myawesomemenu, beautiful.awesome_icon },
+--         -- other triads can be put here
+--     },
+--     after = {
+--         { "Open terminal", terminal },
+--         -- other triads can be put here
+--     }
+-- }
 
 -- Hide the menu when the mouse leaves it
 --[[
@@ -256,7 +261,8 @@ awful.screen.connect_for_each_screen(function(s) beautiful.at_screen_connect(s) 
 -- {{{ Mouse bindings
 
 root.buttons(mytable.join(
-    awful.button({ }, 3, function () awful.util.mymainmenu:toggle() end),
+    -- FREEDESKTOP BUG
+    -- awful.button({ }, 3, function () awful.util.mymainmenu:toggle() end),
     awful.button({ }, 4, awful.tag.viewnext),
     awful.button({ }, 5, awful.tag.viewprev)
 ))
@@ -843,13 +849,7 @@ os.execute("xkbcomp -w 0 -I$HOME/sysmag/hades/xkb $HOME/sysmag/hades/xkb/map $DI
 
 -- setup monitors geometry
 os.execute(
-    "xrandr --output DP-0 --mode 1920x1080 --pos 0x0 --rotate right " ..
-           "--output DP-1 --off " ..
-           "--output HDMI-0 --off " ..
-           "--output DP-2 --off " ..
-           "--output DP-3 --off " ..
-           "--output DP-4 --primary --mode 1920x1080 --refresh 164.92 --pos 1080x660 --rotate normal " ..
-           "--output DP-5 --off "
+    "xrandr --output HDMI-A-0 --off --output DisplayPort-0 --mode 1920x1080 --pos 1080x675 --rotate normal --output DisplayPort-1 --mode 1920x1080 --pos 0x0 --rotate right --output HDMI-A-1 --off"
 )
 
 
