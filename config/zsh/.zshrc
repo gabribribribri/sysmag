@@ -3,6 +3,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # Aliases
 alias lg="lazygit"
+alias zzz="sudo zzz"
 
 # Highlighters
 # ZSH_HIGHLIGHT_HIGHLIGHTERS+=(brackets pattern cursor regexp root line)
