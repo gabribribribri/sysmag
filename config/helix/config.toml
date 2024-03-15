@@ -1,9 +1,9 @@
-theme = "base16_transparent"
+theme = "gruvbox_dark_hard"
 
 [editor]
 middle-click-paste = false
 line-number = "absolute"
-mouse = false
+mouse = true
 true-color = true
 idle-timeout = 0
 bufferline = "always"
@@ -17,15 +17,6 @@ select = "underline"
 [editor.file-picker]
 hidden = false
 
-[keys.insert]
-up = "no_op"
-down = "no_op"
-left = "no_op"
-right = "no_op"
-pageup = "no_op"
-pagedown = "no_op"
-home = "no_op"
-end = "no_op"
 
 [keys.normal]
 up = "no_op"
