@@ -28,3 +28,6 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+# >>> xmake >>>
+test -f "/home/gaybe/.xmake/profile" && source "/home/gaybe/.xmake/profile"
+# <<< xmake <<<
