@@ -323,16 +323,8 @@ function theme.at_screen_connect(s)
 
             baticon,
             bat,
-
+            
             arrl_ld,
-            wibox.container.background(mpdicon, theme.bg_focus),
-            wibox.container.background(theme.mpd.widget, theme.bg_focus),
-            arrl_dl,
-
-            volicon,
-            theme.volume.widget,
-            arrl_ld,
-
             wibox.container.background(memicon, theme.bg_focus),
             wibox.container.background(mem.widget, theme.bg_focus),
 
