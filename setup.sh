@@ -1,16 +1,12 @@
 #!/bin/sh
 
-# Make every bash file executable
-# -!!!- Local paths so needs to execute in ~/sysmag -!!!-
-chmod +x deck/install_nix.sh deck/install_hm.sh deck/hm-switch.sh
-chmod +x hades/init_altgr-weur.sh hades/rebuild-switch.sh hades/rebuild-test.sh
 
 # Create config files symlinks
 symApps=("helix" "awesome" "kitty" "rofi" "tmux")
 
 for app in "${symApps[@]}"; do
-  ln -s $HOME/sysmag/config/$app $HOME/.config/
+  ln -sf $HOME/sysmag/app/$app $HOME/.config/
 done
 
 # ZSH Config
-ln -s $HOME/sysmag/config/zsh/.zshrc $HOME/
+ln -sf $HOME/sysmag/app/zsh/.zshrc $HOME/
