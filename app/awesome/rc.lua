@@ -299,6 +299,9 @@ globalkeys = mytable.join(
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Control"   }, "q", awesome.quit,
               {description = "quit awesome", group = "awesome"}),
+    awful.key({ altkey}, "space", function() os.execute("rofi -show combi -combi-modes \"window,drun\" -modes combi") end,
+              {description = "run rofi", group = "launcher"}),
+
 
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
@@ -692,11 +695,4 @@ client.connect_signal("property::minimized", backham)
 client.connect_signal("unmanage", backham)
 -- ensure there is always a selected client during tag switching or logins
 tag.connect_signal("property::selected", backham)
-
-
-
--- {{{ POST INIT }}}
-os.execute(
-    "$HOME/sysmag/global/kb/init_altgr-weur.sh; $HOME/sysmag/global/mn/base.sh; nitrogen --restore"
-)
 
