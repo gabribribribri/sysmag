@@ -1,5 +1,4 @@
 configuration {
-
     timeout {
         action: "kb-cancel";
         delay:  0;

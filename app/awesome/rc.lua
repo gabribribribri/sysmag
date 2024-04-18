@@ -19,7 +19,7 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local lain = require("lain")
 local freedesktop = require("freedesktop")
-local hotkeys_popup = require("awful.hotkeys_popup")
+local hotkeys_popup = require("awful.hotkeys_popup").widget.new({ width=720, height=480 })
 local mytable = awful.util.table or gears.table
 
 
@@ -116,7 +116,6 @@ lain.layout.cascade.tile.extra_padding = 5
 lain.layout.cascade.tile.nmaster       = 5
 lain.layout.cascade.tile.ncol          = 2
 
- -- TO INVESTIGATE
  awful.util.taglist_buttons = mytable.join(
     awful.button({ }, 1, function(t) t:view_only() end),
     awful.button({ modkey }, 1, function(t)
@@ -131,18 +130,19 @@ lain.layout.cascade.tile.ncol          = 2
 )
 
 awful.util.tasklist_buttons = mytable.join(
-     awful.button({ }, 1, function(c)
+
+    awful.button({ }, 1, function(c)
          if c == client.focus then
              c.minimized = true
          else
              c:emit_signal("request::activate", "tasklist", { raise = true })
          end
-     end),
-     awful.button({ }, 3, function()
+    end),
+    awful.button({ }, 3, function()
          awful.menu.client_list({ theme = { width = 250 } })
-     end),
-     awful.button({ }, 4, function() awful.client.focus.byidx(1) end),
-     awful.button({ }, 5, function() awful.client.focus.byidx(-1) end)
+    end),
+    awful.button({ }, 4, function() awful.client.focus.byidx(1) end),
+    awful.button({ }, 5, function() awful.client.focus.byidx(-1) end)
 )
 
 beautiful.init(string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), chosen_theme))
@@ -210,7 +210,7 @@ globalkeys = mytable.join(
               {description = "lock screen", group = "hotkeys"}),
 
     -- Show help
-    awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
+    awful.key({ modkey,           }, "s", function() hotkeys_popup:show_help(nil, awful.screen.focused()) end,
               {description="show help", group="awesome"}),
 
     -- Tag browsing
