@@ -34,15 +34,9 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-# # Audio conf
-# pipewire &
-# pipewire-pulse &
-# wireplumber &
-
-# Setting scripts
-$HOME/sysmag/global/kb/init_altgr-weur.sh
-$HOME/sysmag/global/mn/base.sh
-nitrogen --restore
+if [ $HOST = "astar" ]; then
+    pipewire &
+fi
 
 # WM
 picom & # Compositor

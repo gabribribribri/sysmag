@@ -1,9 +1,11 @@
 # I don't know what are these for but I think they are important
 export ZSH="$HOME/.oh-my-zsh"
+export SYSMAG="$HOME/sysmag"
+export HOST=$HOST
 
 # Aliases
 alias lg="lazygit"
-alias zzz="sudo zzz"
+
 
 # Highlighters
 # ZSH_HIGHLIGHT_HIGHLIGHTERS+=(brackets pattern cursor regexp root line)

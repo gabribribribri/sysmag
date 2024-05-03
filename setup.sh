@@ -1,19 +1,20 @@
-#!/bin/sh
-
+#!/bin/zsh
 
 # Create config files symlinks
 symApps=("helix" "awesome" "kitty" "rofi" "tmux" "picom")
 
 for app in "${symApps[@]}"; do
-  ln -sf $HOME/sysmag/app/$app $HOME/.config/
+  printf "Setting config for $app\n"
+  ln -sf $SYSMAG/app/$app $HOME/.config/
 done
 
-# ZSH Config
-ln -sf $HOME/sysmag/app/zsh/.zshrc $HOME/
+printf "Setting config for ZSH\n"
+ln -sf $SYSMAG/app/zsh/.zshrc $HOME/
 
-# X Config
-ln -sf $HOME/sysmag/app/x/.xinitrc $HOME/
+printf "Setting config for X\n"
+ln -sf $SYSMAG/app/x/.xinitrc $HOME/
 
-# Rofi Themes
-mkdir -p ~/.local/share/rofi
-ln -sf $HOME/sysmag/app/rofi/themes/ $HOME/.local/share/rofi/
+mkdir -p ~/.SYSMAGal/share/rofi
+printf "Setting config for rofi\n"
+ln -sf $SYSMAG/app/rofi/themes/ $HOME/.SYSMAGal/share/rofi/
+
