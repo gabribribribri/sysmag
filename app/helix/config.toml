@@ -2,7 +2,7 @@ theme = "gruvbox_dark_hard"
 
 [editor]
 middle-click-paste = false
-line-number = "absolute"
+line-number = "relative"
 mouse = true
 true-color = true
 idle-timeout = 0

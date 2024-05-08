@@ -1,5 +1,8 @@
 #!/bin/zsh
 
+# link documents to doc
+ln -sf $HOME/Documents $HOME/doc
+
 # Create config files symlinks
 symApps=("helix" "awesome" "kitty" "rofi" "tmux" "picom")
 
