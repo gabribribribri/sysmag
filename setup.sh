@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+SYSMAG=$HOME/sysmag
+
 # link documents to doc
 ln -sf $HOME/Documents $HOME/doc
 
@@ -17,7 +19,7 @@ ln -sf $SYSMAG/app/zsh/.zshrc $HOME/
 printf "Setting config for X\n"
 ln -sf $SYSMAG/app/x/.xinitrc $HOME/
 
-mkdir -p ~/.SYSMAGal/share/rofi
+mkdir -p ~/.local/share/rofi
 printf "Setting config for rofi\n"
-ln -sf $SYSMAG/app/rofi/themes/ $HOME/.SYSMAGal/share/rofi/
+ln -sf $SYSMAG/app/rofi/themes/ $HOME/.local/share/rofi/
 

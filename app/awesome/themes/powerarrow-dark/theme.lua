@@ -10,6 +10,7 @@ local lain                                      = require("lain")
 local awful                                     = require("awful")
 local wibox                                     = require("wibox")
 local dpi                                       = require("beautiful.xresources").apply_dpi
+local host                                      = os.getenv("HOST")
 
 local os                                        = os
 local my_table                                  = awful.util.table or gears.table -- 4.{0,1} compatibility
@@ -323,19 +324,18 @@ function theme.at_screen_connect(s)
       wibox.widget.systray(),
       spr,
 
-      os.getenv("HOST") == "astar" and volicon,
-      os.getenv("HOST") == "astar" and theme.volume.widget,
-      os.getenv("HOST") == "astar" and arrl_ld,
+      host == "astar" and volicon,
+      host == "astar" and theme.volume.widget,
+      host == "astar" and arrl_ld,
 
-      os.getenv("HOST") == "think" and arrl_ld,
-      os.getenv("HOST") == "think" and wibox.container.background(volicon, theme.bg_focus),
-      os.getenv("HOST") == "think" and wibox.container.background(theme.volume.widget, theme.bg_focus),
-      os.getenv("HOST") == "think" and arrl_ld,
+      host == "think" and arrl_ld,
+      host == "think" and wibox.container.background(volicon, theme.bg_focus),
+      host == "think" and wibox.container.background(theme.volume.widget, theme.bg_focus),
 
-      os.getenv("HOST") == "think" and arrl_dl,
-      os.getenv("HOST") == "think" and baticon,
-      os.getenv("HOST") == "think" and bat,
-      os.getenv("HOST") == "think" and arrl_ld,
+      host == "think" and arrl_dl,
+      host == "think" and baticon,
+      host == "think" and bat,
+      host == "think" and arrl_ld,
 
       wibox.container.background(memicon, theme.bg_focus),
       wibox.container.background(mem.widget, theme.bg_focus),
