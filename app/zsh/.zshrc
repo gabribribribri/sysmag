@@ -35,4 +35,4 @@ test -f "/home/gaybe/.xmake/profile" && source "/home/gaybe/.xmake/profile"
 # <<< xmake <<<
 
 # keep at the end
-eval "$(zoxide init --cmd cd bash)"
+eval "$(zoxide init --cmd cd zsh)"
