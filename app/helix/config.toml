@@ -8,7 +8,6 @@ true-color = true
 idle-timeout = 0
 bufferline = "always"
 auto-completion = true
-auto-save = true
 
 [editor.cursor-shape]
 insert = "bar"
