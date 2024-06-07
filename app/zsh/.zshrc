@@ -1,6 +1,7 @@
 # Environement variables
 export ZSH="$HOME/.oh-my-zsh"
 export SYSMAG="$HOME/sysmag"
+export EDITOR="/usr/bin/hx"
 export HOST=$HOST
 
 # Aliases
@@ -30,9 +31,10 @@ plugins=(
 
 
 source $ZSH/oh-my-zsh.sh
-# >>> xmake >>>
-test -f "/home/gaybe/.xmake/profile" && source "/home/gaybe/.xmake/profile"
-# <<< xmake <<<
+
 
 # keep at the end
 eval "$(zoxide init --cmd cd zsh)"
+# >>> xmake >>>
+test -f "/home/gaybe/.xmake/profile" && source "/home/gaybe/.xmake/profile"
+# <<< xmake <<<
