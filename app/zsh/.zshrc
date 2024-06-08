@@ -6,6 +6,7 @@ export HOST=$HOST
 
 # Aliases
 alias lg="lazygit"
+alias qalc="qalc -c"
 
 # Highlighters
 # ZSH_HIGHLIGHT_HIGHLIGHTERS+=(brackets pattern cursor regexp root line)
@@ -18,7 +19,7 @@ ZSH_AUTOSUGGEST_STRATEGY=(
 )
 
 # Theme
-ZSH_THEME="rkj-repos"
+ZSH_THEME="bira"
 
 # Plugins
 plugins=(
@@ -27,14 +28,16 @@ plugins=(
   rust
   zsh-autosuggestions
   zsh-syntax-highlighting
+  git
 )
 
 
 source $ZSH/oh-my-zsh.sh
 
 
-# keep at the end
+# keep at the end. If problem, this can be done with omz plugins
 eval "$(zoxide init --cmd cd zsh)"
+
 # >>> xmake >>>
 test -f "/home/gaybe/.xmake/profile" && source "/home/gaybe/.xmake/profile"
 # <<< xmake <<<
