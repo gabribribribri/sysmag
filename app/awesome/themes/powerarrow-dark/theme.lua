@@ -5,6 +5,18 @@
 
 --]]
 
+-- Return a list of all file in a dir
+-- function scandir(directory)
+--     local i, t, popen = 0, {}, io.popen
+--     local pfile = popen('ls -A "'..directory..'"')
+--     for filename in pfile:lines() do
+--         i = i + 1
+--         t[i] = filename
+--     end
+--     pfile:close()
+--     return t
+-- end
+
 local gears                                     = require("gears")
 local lain                                      = require("lain")
 local awful                                     = require("awful")
@@ -17,7 +29,9 @@ local my_table                                  = awful.util.table or gears.tabl
 
 local theme                                     = {}
 theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/powerarrow-dark"
-theme.wallpaper                                 = theme.dir .. "/wall.png"
+-- theme.wallpaper                                 = theme.dir .. "/wall.png"
+-- theme.wallh                                     = scandir(theme.dir .. "/wallh")
+-- theme.wallv                                     = scandir(theme.dir .. "/wallv")
 theme.font                                      = "Terminus 9"
 theme.fg_normal                                 = "#DDDDFF"
 theme.fg_focus                                  = "#EA6F81"
@@ -277,12 +291,13 @@ function theme.at_screen_connect(s)
   -- Quake application
   s.quake = lain.util.quake({ app = awful.util.terminal })
 
-  -- If wallpaper is a function, call it with the screen
-  local wallpaper = theme.wallpaper
-  if type(wallpaper) == "function" then
-    wallpaper = wallpaper(s)
-  end
-  gears.wallpaper.maximized(wallpaper, s, true)
+
+  -- Failed attempt to make a random background selector
+  -- if s.geometry.width / s.geometry.height > 1 then
+  --   gears.wallpaper.maximized(theme.dir .. "/wallh/" .. theme.wallh[math.random(#theme.wallh)], s, true)
+  -- else
+  --   gears.wallpaper.maximized(theme.dir .. "/wallv/" .. theme.wallv[math.random(#theme.wallv)], s, true)
+  -- end
 
   -- Tags
   awful.tag(awful.util.tagnames, s, awful.layout.layouts[1])
