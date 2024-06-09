@@ -41,4 +41,3 @@ fi
 # WM
 picom & # Compositor
 exec awesome
-

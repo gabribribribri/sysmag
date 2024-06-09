@@ -714,4 +714,4 @@ os.execute("$SYSMAG/global/kb/init_altgr-weur.sh")
 if os.getenv("HOST") == "astar" then
   os.execute("$SYSMAG/global/mn/fatty.sh")
 end
-os.execute("nitrogen --restore")
+os.execute("~/.fehbg")
