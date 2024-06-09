@@ -292,11 +292,11 @@ function theme.at_screen_connect(s)
   s.quake = lain.util.quake({ app = awful.util.terminal })
 
 
-  -- Failed attempt to make a random background selector
+  -- Failed attempt to make different default screen layout
   -- if s.geometry.width / s.geometry.height > 1 then
-  --   gears.wallpaper.maximized(theme.dir .. "/wallh/" .. theme.wallh[math.random(#theme.wallh)], s, true)
+  --   awful.layout.inc(1)
   -- else
-  --   gears.wallpaper.maximized(theme.dir .. "/wallv/" .. theme.wallv[math.random(#theme.wallv)], s, true)
+  --   awful.layout.inc(1)
   -- end
 
   -- Tags
