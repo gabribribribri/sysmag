@@ -6,7 +6,7 @@ SYSMAG=$HOME/sysmag
 ln -sf $HOME/Documents $HOME/doc
 
 # Create config files symlinks
-symApps=("helix" "awesome" "kitty" "rofi" "tmux" "picom")
+symApps=("helix" "awesome" "kitty" "rofi" "tmux" "picom" "clangd")
 
 for app in "${symApps[@]}"; do
   printf "Setting config for $app\n"
@@ -18,6 +18,9 @@ ln -sf $SYSMAG/app/zsh/.zshrc $HOME/
 
 printf "Setting config for X\n"
 ln -sf $SYSMAG/app/x/.xinitrc $HOME/
+
+printf "Setting config for clang-format\n"
+ln -sf $SYSMAG/app/clangd/.clang-format $HOME/
 
 mkdir -p ~/.local/share/rofi
 printf "Setting config for rofi\n"
