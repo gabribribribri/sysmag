@@ -12,16 +12,14 @@
 -- If LuaRocks is installed, make sure that
 -- packages installed through it are found
 pcall(require, "luarocks.loader")
-local gears = require("gears")
-local awful = require("awful")
-local wibox = require("wibox")
-local beautiful = require("beautiful")
-local naughty = require("naughty")
-local lain = require("lain")
--- local freedesktop = require("freedesktop") -- no need for this
+local gears         = require("gears")
+local awful         = require("awful")
+local wibox         = require("wibox")
+local beautiful     = require("beautiful")
+local naughty       = require("naughty")
+local lain          = require("lain")
 local hotkeys_popup = require("awful.hotkeys_popup").widget.new({ width = 950, height = 600 }) -- modified to be 950x600
--- local hotkeys_popup = require("awful.hotkeys_popup")
-local mytable = awful.util.table or gears.table
+local mytable       = awful.util.table or gears.table
 
 
 
@@ -187,7 +185,7 @@ awful.screen.connect_for_each_screen(function(s) beautiful.at_screen_connect(s) 
 
 root.buttons(mytable.join(
 -- FREEDESKTOP BUG
-  awful.button({}, 3, function() awful.util.mymainmenu:toggle() end),
+  -- awful.button({}, 3, function() awful.util.mymainmenu:toggle() end),
   awful.button({}, 4, awful.tag.viewnext),
   awful.button({}, 5, awful.tag.viewprev)
 ))
