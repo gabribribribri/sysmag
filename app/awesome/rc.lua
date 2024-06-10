@@ -199,10 +199,6 @@ globalkeys = mytable.join(
   awful.key({ "Control", }, "space", function() naughty.destroy_all_notifications() end,
     { description = "destroy all notifications", group = "hotkeys" }),
 
-  -- Take a screenshot
-  -- https://github.com/lcpz/dots/blob/master/bin/screenshot
-  awful.key({ modkey }, "p", function() awful.spawn.with_shell("gnome-screenshot --interactive") end,
-    { description = "run gnome-screenshot", group = "launcher" }),
 
   -- X screen locker
   awful.key({ altkey, "Control" }, "l", function() os.execute(scrlocker) end,
@@ -291,17 +287,11 @@ globalkeys = mytable.join(
   awful.key({ modkey, "Shift" }, "d", function() lain.util.delete_tag() end,
     { description = "delete tag", group = "tag" }),
 
-  -- Standard program
-  awful.key({ modkey, }, "Return", function() awful.spawn(terminal) end,
-    { description = "open a terminal", group = "launcher" }),
+  -- Standard restart/shutdown
   awful.key({ modkey, "Control" }, "r", awesome.restart,
     { description = "reload awesome", group = "awesome" }),
   awful.key({ modkey, "Control" }, "q", awesome.quit,
     { description = "quit awesome", group = "awesome" }),
-  awful.key({ altkey }, "space", function() os.execute("rofi -show combi -combi-modes \"window,drun\" -modes combi") end,
-    { description = "run rofi with modes window and drun ", group = "launcher" }),
-  awful.key({ altkey }, "c", function() os.execute("rofi -show calc -modi calc -no-show-match -no-sort") end,
-    { description = "run rofi with mode calc", group = "launcher" }),
 
 
   -- Layout manipulation
@@ -426,10 +416,22 @@ globalkeys = mytable.join(
   -- Start Firefox
   awful.key({ modkey }, "q", function() awful.spawn(browser) end,
     { description = "run browser", group = "launcher" }),
-
   -- Prompt
   awful.key({ modkey }, "r", function() awful.screen.focused().mypromptbox:run() end,
-    { description = "run prompt", group = "launcher" })
+    { description = "run prompt", group = "launcher" }),
+  -- Take a screenshot
+  -- https://github.com/lcpz/dots/blob/master/bin/screenshot
+  awful.key({ modkey }, "p", function() awful.spawn.with_shell("gnome-screenshot --interactive") end,
+    { description = "run gnome-screenshot", group = "launcher" }),
+  -- Spawn a terminal
+  awful.key({ modkey, }, "Return", function() awful.spawn(terminal) end,
+    { description = "open a terminal", group = "launcher" }),
+  -- Rofi
+  awful.key({ altkey }, "space", function() os.execute("rofi -show combi -combi-modes \"window,drun\" -modes combi") end,
+    { description = "run rofi with modes window and drun ", group = "launcher" }),
+  awful.key({ altkey }, "c", function() os.execute("rofi -show calc -modi calc -no-show-match -no-sort") end,
+    { description = "run rofi with mode calc", group = "launcher" })
+
 )
 
 clientkeys = mytable.join(
