@@ -82,12 +82,12 @@ local browser                          = "firefox" -- commmand to start firefox
 awful.util.terminal                    = terminal
 awful.util.tagnames                    = { "1", "2", "3", "4", "5" }
 awful.layout.layouts                   = {
-  awful.layout.suit.tile.right,   --Default
+  awful.layout.suit.floating,    --Default
+  awful.layout.suit.tile.right,
   -- awful.layout.suit.tile,
   -- awful.layout.suit.tile.left,
   -- awful.layout.suit.tile.bottom,
   awful.layout.suit.tile.top,
-  awful.layout.suit.floating,
   -- awful.layout.suit.fair,
   -- awful.layout.suit.fair.horizontal,
   -- awful.layout.suit.spiral,
@@ -301,7 +301,9 @@ globalkeys = mytable.join(
   awful.key({ modkey, "Control" }, "q", awesome.quit,
     { description = "quit awesome", group = "awesome" }),
   awful.key({ altkey }, "space", function() os.execute("rofi -show combi -combi-modes \"window,drun\" -modes combi") end,
-    { description = "run rofi", group = "launcher" }),
+    { description = "run rofi with modes window and drun ", group = "launcher" }),
+  awful.key({ altkey }, "c", function() os.execute("rofi -show calc -modi calc -no-show-match -no-sort") end,
+    { description = "run rofi with mode calc", group = "launcher" }),
 
 
   -- Layout manipulation
@@ -714,4 +716,4 @@ os.execute("$SYSMAG/global/kb/init_altgr-weur.sh")
 if os.getenv("HOST") == "astar" then
   os.execute("$SYSMAG/global/mn/fatty.sh")
 end
-os.execute("~/.fehbg")
+os.execute("nitrogen --restore")

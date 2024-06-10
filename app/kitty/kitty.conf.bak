@@ -1,4 +1,7 @@
 # BEGIN_KITTY_THEME
-# Gruvbox Dark
+# Ayu Mirage
 include current-theme.conf
 # END_KITTY_THEME
+
+# Not ask to confirm on close
+confirm_os_window_close 0
