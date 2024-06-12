@@ -1,8 +1,10 @@
 
 If:
   PathMatch: '.*\.cpp'
+  PathMatch: '.*\.hpp'
 CompileFlags:
-  Add: [-std=c++23, -Weverything]
+  # Add: ["-std=c++23", "-Weverything", "-stdlib=libc++", "-Wl,-rpath,/usr/lib"]
+  Add: ["-Wall", "-Wextra"]
   Compiler: clang++
 # Diagnostics:
   # ClangTidy:

@@ -3,13 +3,14 @@ export ZSH="$HOME/.oh-my-zsh"
 export SYSMAG="$HOME/sysmag"
 export EDITOR="/usr/bin/hx"
 export HOST=$HOST
+export QT_QPA_PLATFORMTHEME="qt6ct"
 
 # Aliases
 alias lg="lazygit"
 alias qalc="qalc -c"
 
 # Highlighters
-# ZSH_HIGHLIGHT_HIGHLIGHTERS+=(brackets pattern cursor regexp root line)
+ZSH_HIGHLIGHT_HIGHLIGHTERS+=(main brackets pattern cursor regexp root line)
 
 # Autosuggestions
 ZSH_AUTOSUGGEST_STRATEGY=(
@@ -17,6 +18,7 @@ ZSH_AUTOSUGGEST_STRATEGY=(
   match_prev_cmd
   history
 )
+
 
 # Theme
 ZSH_THEME="bira"
