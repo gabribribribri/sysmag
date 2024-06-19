@@ -72,8 +72,8 @@ local chosen_theme                     = "powerarrow-dark"
 local modkey                           = "Mod4"
 local altkey                           = "Mod1"
 local terminal                         = "kitty"
-local vi_focus                         = false -- vi-like client focus https://github.com/lcpz/awesome-copycats/issues/275
-local cycle_prev                       = true -- cycle with only the previously focused client or all https://github.com/lcpz/awesome-copycats/issues/274
+local vi_focus                         = false     -- vi-like client focus https://github.com/lcpz/awesome-copycats/issues/275
+local cycle_prev                       = true      -- cycle with only the previously focused client or all https://github.com/lcpz/awesome-copycats/issues/274
 local editor                           = os.getenv("EDITOR") or "hx"
 local browser                          = "firefox" -- commmand to start firefox
 
@@ -81,7 +81,7 @@ awful.util.terminal                    = terminal
 awful.util.tagnames                    = { "1", "2", "3", "4", "5" }
 awful.layout.layouts                   = {
   awful.layout.suit.tile.right, -- Default
-  awful.layout.suit.floating,    
+  awful.layout.suit.floating,
   -- awful.layout.suit.tile,
   -- awful.layout.suit.tile.left,
   -- awful.layout.suit.tile.bottom,
@@ -185,7 +185,7 @@ awful.screen.connect_for_each_screen(function(s) beautiful.at_screen_connect(s) 
 
 root.buttons(mytable.join(
 -- FREEDESKTOP BUG
-  -- awful.button({}, 3, function() awful.util.mymainmenu:toggle() end),
+-- awful.button({}, 3, function() awful.util.mymainmenu:toggle() end),
   awful.button({}, 4, awful.tag.viewnext),
   awful.button({}, 5, awful.tag.viewprev)
 ))
@@ -449,8 +449,18 @@ clientkeys = mytable.join(
     { description = "toggle floating", group = "client" }),
   awful.key({ modkey, "Control" }, "Return", function(c) c:swap(awful.client.getmaster()) end,
     { description = "move to master", group = "client" }),
-  awful.key({ modkey, }, "o", function(c) c:move_to_screen() end,
-    { description = "move to screen", group = "client" }),
+  -- OLD CODE
+  -- awful.key({ modkey, }, "o", function(c) c:move_to_screen() end,
+  -- { description = "move to screen", group = "client" }),
+  -- NEW CODE FOR SCREEN MOVING
+  awful.key({ altkey }, "h", function(c)
+      c:move_to_screen(c.screen.index + 1)
+    end,
+    { description = "move to screen on left", group = "client" }),
+  awful.key({ altkey }, "l", function(c)
+      c:move_to_screen(c.screen.index - 1)
+    end,
+    { description = "move to screen on right", group = "client" }),
   awful.key({ modkey, }, "t", function(c) c.ontop = not c.ontop end,
     { description = "toggle keep on top", group = "client" }),
   awful.key({ modkey, }, "n",
@@ -469,6 +479,7 @@ clientkeys = mytable.join(
   awful.key({ modkey, "Control" }, "m",
     function(c)
       c.maximized_vertical = not c.maximized_vertical
+
       c:raise()
     end,
     { description = "(un)maximize vertically", group = "client" }),
@@ -479,7 +490,7 @@ clientkeys = mytable.join(
     end,
     { description = "(un)maximize horizontally", group = "client" }),
   awful.key({ modkey }, 'v', awful.titlebar.toggle,
-   { description = "toggle title bar for client", group = "client" })
+    { description = "toggle title bar for client", group = "client" })
 )
 
 -- Bind all key numbers to tags.
@@ -576,8 +587,8 @@ awful.rules.rules = {
   {
     rule_any = {
       instance = {
-        "DTA",     -- Firefox addon DownThemAll.
-        "copyq",   -- Includes session name in class.
+        "DTA",   -- Firefox addon DownThemAll.
+        "copyq", -- Includes session name in class.
         "pinentry",
       },
       class = {
@@ -585,9 +596,9 @@ awful.rules.rules = {
         "Blueman-manager",
         "Gpick",
         "Kruler",
-        "MessageWin",    -- kalarm.
+        "MessageWin",  -- kalarm.
         "Sxiv",
-        "Tor Browser",   -- Needs a fixed window size to avoid fingerprinting by screen size.
+        "Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
         "Wpa_gui",
         "veromix",
         "xtightvncviewer" },
@@ -595,12 +606,12 @@ awful.rules.rules = {
       -- Note that the name property shown in xprop might be set slightly after creation of the client
       -- and the name shown there might not match defined rules here.
       name = {
-        "Event Tester",   -- xev.
+        "Event Tester", -- xev.
       },
       role = {
-        "AlarmWindow",     -- Thunderbird's calendar.
-        "ConfigManager",   -- Thunderbird's about:config.
-        "pop-up",          -- e.g. Google Chrome's (detached) Developer Tools.
+        "AlarmWindow",   -- Thunderbird's calendar.
+        "ConfigManager", -- Thunderbird's about:config.
+        "pop-up",        -- e.g. Google Chrome's (detached) Developer Tools.
       }
     },
     properties = { floating = true }
@@ -661,20 +672,20 @@ client.connect_signal("request::titlebars", function(c)
   )
 
   awful.titlebar(c, { size = 16 }):setup {
-    {     -- Left
+    { -- Left
       awful.titlebar.widget.iconwidget(c),
       buttons = buttons,
       layout  = wibox.layout.fixed.horizontal
     },
-    {         -- Middle
-      {       -- Title
+    {   -- Middle
+      { -- Title
         align  = "center",
         widget = awful.titlebar.widget.titlewidget(c)
       },
       buttons = buttons,
       layout  = wibox.layout.flex.horizontal
     },
-    {     -- Right
+    { -- Right
       awful.titlebar.widget.floatingbutton(c),
       awful.titlebar.widget.maximizedbutton(c),
       awful.titlebar.widget.stickybutton(c),
