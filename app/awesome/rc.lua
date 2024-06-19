@@ -80,8 +80,8 @@ local browser                          = "firefox" -- commmand to start firefox
 awful.util.terminal                    = terminal
 awful.util.tagnames                    = { "1", "2", "3", "4", "5" }
 awful.layout.layouts                   = {
-  awful.layout.suit.floating,    --Default
-  awful.layout.suit.tile.right,
+  awful.layout.suit.tile.right, -- Default
+  awful.layout.suit.floating,    
   -- awful.layout.suit.tile,
   -- awful.layout.suit.tile.left,
   -- awful.layout.suit.tile.bottom,
