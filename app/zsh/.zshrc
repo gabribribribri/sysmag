@@ -5,12 +5,16 @@ export EDITOR="/usr/bin/hx"
 export HOST=$HOST
 export QT_QPA_PLATFORMTHEME="qt6ct"
 
-# Aliases
-alias lg="lazygit"
-alias qalc="qalc -c"
 
 # Highlighters
-ZSH_HIGHLIGHT_HIGHLIGHTERS+=(main brackets pattern cursor regexp root line)
+ZSH_HIGHLIGHT_HIGHLIGHTERS+=(main
+  brackets
+  pattern
+  # cursor
+  regexp
+  root
+  line
+)
 
 # Autosuggestions
 ZSH_AUTOSUGGEST_STRATEGY=(
@@ -33,9 +37,12 @@ plugins=(
   git
 )
 
+# Aliases
+alias lg="lazygit"
+alias qalc="qalc -c"
+alias lsd="lsd -lAg"
 
 source $ZSH/oh-my-zsh.sh
-
 
 # keep at the end. If problem, this can be done with omz plugins
 eval "$(zoxide init --cmd cd zsh)"
