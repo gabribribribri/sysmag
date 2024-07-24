@@ -48,5 +48,5 @@ source $ZSH/oh-my-zsh.sh
 eval "$(zoxide init --cmd cd zsh)"
 
 # >>> xmake >>>
-test -f "/home/gaybe/.xmake/profile" && source "/home/gaybe/.xmake/profile"
+test -f "$HOME/.xmake/profile" && source "$HOME/.xmake/profile"
 # <<< xmake <<<
