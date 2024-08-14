@@ -6,7 +6,7 @@ SYSMAG=$HOME/sysmag
 ln -sf $HOME/Documents $HOME/doc
 
 # Create config files symlinks
-symApps=("helix" "awesome" "kitty" "rofi" "tmux" "picom" "clangd")
+symApps=("helix" "awesome" "kitty" "rofi" "tmux" "picom" "clangd" "btop")
 
 for app in "${symApps[@]}"; do
   printf "Setting config for $app\n"
