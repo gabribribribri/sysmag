@@ -2,24 +2,10 @@
 
 {
 
-    # Workspace configuration
-    # imports = [ ../../kzth.nix ];
-    
 		# Unsecure packages permitted
     nixpkgs.config.permittedInsecurePackages = [
         "electron-24.8.6"
     ];
-    ### ZSH CONFIGURATION ###		
-    programs.zsh = {
-      enable = true;
-      ohMyZsh.enable = true;
-      shellInit = "~/sysmag/home/app/zsh/.zshrc";
-    };
-
-    # Set zsh default
-    users.defaultUserShell = pkgs.zsh;
-    # gaybe uses default
-    users.users.gaybe.useDefaultShell = true;
 
 		# make Steam usable
     programs.steam = {
