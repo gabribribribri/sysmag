@@ -10,4 +10,10 @@
     "picom".source = ./app/picom;
     "rofi".source = ./app/rofi;
   };
+
+  programs.zoxide = {
+    enable = true;
+    enableZshIntegration = true;
+    options = [ "--cmd cd" ];
+  };
 }

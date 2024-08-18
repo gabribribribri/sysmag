@@ -12,7 +12,7 @@
 
   outputs = { self, nixpkgs, ... } @ inputs: {
     nixosConfigurations.hades = nixpkgs.lib.nixosSystem {
-      extraSpecialArgs = {inherit inputs;};
+      specialArgs = {inherit inputs;};
 
       modules = [
             # Home Manager

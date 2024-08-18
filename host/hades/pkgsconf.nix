@@ -12,7 +12,8 @@
     ### ZSH CONFIGURATION ###		
     programs.zsh = {
       enable = true;
-      shellInit = "../app/zsh/.zshrc";
+      ohMyZsh.enable = true;
+      shellInit = "~/sysmag/home/app/zsh/.zshrc";
     };
 
     # Set zsh default

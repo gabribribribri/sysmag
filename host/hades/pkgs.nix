@@ -5,9 +5,9 @@
         [
         
             # Code Workflow
-            git lazygit nnn
-            helix tmux zsh kitty
-            vscode
+            git lazygit
+            helix zsh kitty
+            yazi zoxide
 
             # Classic Workflow
             firefox obsidian spotify
