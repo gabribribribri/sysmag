@@ -3,6 +3,7 @@
 {
   imports = [
     ./app.nix
+    ./zsh.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -10,8 +11,18 @@
   home.homeDirectory = "/home/gaybe";
   home.stateVersion = "24.05"; # Please read the comment before changing.
 
-  home.packages = [
-    # pkgs.hello
+  home.packages = with pkgs;
+  [
+    zsh
+    btop
+    awesome
+    helix
+    kitty
+    picom
+    rofi
+    lazygit
+    yazi
+    zoxide
   ];
 
   home.file = {

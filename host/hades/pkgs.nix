@@ -5,12 +5,10 @@
         [
         
             # Code Workflow
-            git lazygit
-            helix zsh kitty
-            yazi zoxide
+            git zsh kitty
 
             # Classic Workflow
-            firefox obsidian spotify
+            firefox obsidian
 
             # Awesome WM pkgs
             arandr nitrogen
@@ -20,15 +18,13 @@
             python3
             rustc cargo rust-analyzer
             dart
-            lua lua-language-server
+            lua54Packages.lua
+            lua54Packages.luarocks
+            lua-language-server 
             clang-tools_16
 
             # Showing off
-            htop cmatrix neofetch
-
-            # Gaming
-            steam prismlauncher
-            (pkgs.discord.override {withVencord = true;})
+            htop cmatrix fastfetch
 
             # Reste
             baobab wget
