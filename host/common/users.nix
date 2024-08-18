@@ -7,4 +7,9 @@
         extraGroups = [ "networkmanager" "wheel" ];
     };
 
+    home-manager = {
+        extraSpecialArgs = { inherit inputs; };
+        users."gaybe" = import ../../home/home.nix
+    }
+
 }

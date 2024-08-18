@@ -17,29 +17,29 @@
       modules = [
             # Home Manager
             inputs.home-manager.nixosModules.default
-            ./home/home.nix
+            home/home.nix
             
             # Hardware scan
-            ./host/hades/hardware-configuration.nix
+            host/hades/hardware-configuration.nix
 
             # Packages
-            ./host/hades/pkgs.nix
+            host/hades/pkgs.nix
 
             # Packages configuration
-            ./host/hades/pkgsconf.nix
+            host/hades/pkgsconf.nix
 
             # Other important things
-            ./host/hades/stuff.nix
+            host/hades/stuff.nix
 
             # Include users configuration
             host/common/users.nix
 
 
             # Networking & Locales
-            ./host/hades/nw.nix
+            host/hades/nw.nix
 
             # Audio
-            ./host/hades/sound.nix
+            host/hades/sound.nix
 
       ];
     };
