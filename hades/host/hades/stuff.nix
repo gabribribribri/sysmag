@@ -43,7 +43,7 @@
 
 
     # Allow experimental nix features
-    nix.settings.experimental-features = [ "nix-command" ];
+    nix.settings.experimental-features = [ "flakes" "nix-command" ];
 
 
     # Allow bluetooth

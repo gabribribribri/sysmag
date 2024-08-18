@@ -1,8 +1,10 @@
-{ config, pkgs, ...}:
+{ config, pkgs, inputs, ...}:
 
 {
     imports =
         [
+            # Home Manager
+            inputs.home-manager.nixosModules.default
             
             # Hardware scan
             /etc/nixos/hardware-configuration.nix
@@ -20,7 +22,7 @@
             ./users.nix
 
             # Mars & Jupiter
-            ./disks.nix
+            # ./disks.nix
 
             # Networking & Locales
             ./nw.nix
@@ -29,7 +31,14 @@
             ./sound.nix
 
             # Nvidia drivers configuration
-            ./drivers.nix
+            # ./drivers.nix
 
         ];
+
+    home-manager = {
+        extraSpecialArgs = { inherit inputs; };
+        users = {
+            "gaybe" = import ./home.nix
+        }
+    }
 }

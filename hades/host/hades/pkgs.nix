@@ -32,6 +32,7 @@
 
             # Reste
             baobab wget
+            gparted
             libreoffice-qt
             xorg.xkbcomp
             vlc

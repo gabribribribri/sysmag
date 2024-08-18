@@ -3,7 +3,7 @@
 {
 
     # Workspace configuration
-    imports = [ /home/gaybe/sysmag/config/nix/kzth.nix ];
+    imports = [ /home/gaybe/sysmag/hades/config/kzth.nix ];
     
 		# Unsecure packages permitted
     nixpkgs.config.permittedInsecurePackages = [
