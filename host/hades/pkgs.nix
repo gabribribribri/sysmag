@@ -36,7 +36,7 @@
             libreoffice-qt
             xorg.xkbcomp
             vlc
-            gnome.gnome-screenshot
+            gnome-screenshot
             libsForQt5.kfind
             libsForQt5.gwenview
         ];

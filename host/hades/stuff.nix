@@ -8,10 +8,10 @@
 
     services = {
         # Enable the X11 windowing system.
-        enable = true;
+        xserver.enable = true;
 
         # Enable Awesome WM
-        windowManager.awesome = {
+        xserver.windowManager.awesome = {
             enable = true;
             luaModules = with pkgs.luaPackages; [
                 luarocks # is the package manager for Lua modules
