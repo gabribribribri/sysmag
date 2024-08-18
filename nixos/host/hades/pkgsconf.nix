@@ -3,12 +3,17 @@
 {
 
     # Workspace configuration
-    imports = [ /home/gaybe/sysmag/hades/config/kzth.nix ];
+    # imports = [ ../../kzth.nix ];
     
 		# Unsecure packages permitted
     nixpkgs.config.permittedInsecurePackages = [
         "electron-24.8.6"
     ];
+    ### ZSH CONFIGURATION ###		
+    programs.zsh = {
+      enable = true;
+      shellInit = "../app/zsh/.zshrc";
+    };
 
     # Set zsh default
     users.defaultUserShell = pkgs.zsh;

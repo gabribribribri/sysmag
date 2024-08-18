@@ -13,8 +13,10 @@
   outputs = { self, nixpkgs, ... } @ inputs: {
     nixosConfigurations.hades = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
+
       modules = [
         ./host/hades/all.nix
+        ./app.nix
         inputs.home-manager.nixosModules.default
       ];
     };

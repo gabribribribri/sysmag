@@ -7,7 +7,7 @@
             inputs.home-manager.nixosModules.default
             
             # Hardware scan
-            /etc/nixos/hardware-configuration.nix
+            ./hardware-configuration.nix
 
             # Packages
             ./pkgs.nix
@@ -19,7 +19,7 @@
             ./stuff.nix
 
             # Include users configuration
-            ./users.nix
+            ../../users.nix
 
             # Mars & Jupiter
             # ./disks.nix
@@ -35,10 +35,12 @@
 
         ];
 
-    home-manager = {
-        extraSpecialArgs = { inherit inputs; };
-        users = {
-            "gaybe" = import ./home.nix
-        }
-    }
+        
+        home-manager = {
+            extraSpecialArgs = { inherit inputs; };
+            users = {
+                "gaybe" = import ../../home.nix;
+            };
+        };
+        
 }
