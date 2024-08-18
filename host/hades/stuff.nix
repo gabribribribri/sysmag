@@ -6,7 +6,7 @@
     boot.loader.efi.canTouchEfiVariables = true;
  
 
-    services.xserver = {
+    services = {
         # Enable the X11 windowing system.
         enable = true;
 
