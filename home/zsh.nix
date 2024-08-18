@@ -1,4 +1,4 @@
-{ pkgs, config, inputs, ...}:
+{ pkgs, config, ...}:
 {
     ### ZSH CONFIGURATION ###		
     programs.zsh = {

@@ -6,35 +6,35 @@
         
             # Code Workflow
             git zsh kitty
+            helix lazygit
+            yazi zoxide lsd tree
 
             # Classic Workflow
             firefox obsidian
 
             # Awesome WM pkgs
             arandr nitrogen
-            rofi # libqalculate rofi-calc
+            rofi libqalculate rofi-calc
+            awesome gnome-screenshot
             
             # Languages
             python3
             rustc cargo rust-analyzer
-            dart
-            lua54Packages.lua
-            lua54Packages.luarocks
-            lua-language-server 
+            dart lua-language-server 
             clang-tools_16
 
             # Showing off
-            htop cmatrix fastfetch
+            htop cmatrix
+            fastfetch btop 
 
             # Reste
             baobab wget
-            gparted
+            curl gparted
             libreoffice-qt
-            xorg.xkbcomp
             vlc
-            gnome-screenshot
             libsForQt5.kfind
             libsForQt5.gwenview
+            kdePackages.dolphin
         ];
 
     fonts.packages = with pkgs;

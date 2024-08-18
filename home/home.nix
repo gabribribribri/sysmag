@@ -14,12 +14,6 @@
 
   home.packages = with pkgs;
   [
-    zsh btop
-    awesome helix
-    kitty picom
-    rofi lazygit
-    yazi zoxide
-    lsd tree
   ];
 
   # Let Home Manager install and manage itself.
