@@ -4,7 +4,7 @@
     imports =
     [
         # Bluetooth
-        ./bluetooth
+        ./bluetooth.nix
 
 
         # Bootloader 
@@ -14,6 +14,11 @@
         # Networking
         ./network.nix
 
+
+        # Environment Variables
+        ./env.nix
+        
+        
         # Packages List
         ./pkgs.nix
 
