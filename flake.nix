@@ -16,7 +16,7 @@
 
       modules = [
         ./host/hades/all.nix
-        ./app.nix
+        ./home/app.nix
         inputs.home-manager.nixosModules.default
       ];
     };
