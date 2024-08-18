@@ -10,7 +10,7 @@
         lg = "lazygit";
         qalc = "qalc -c";
         lsd = "lsd -lAg";
-        nrs-hades = "sudo nixos-rebuild switch --flake ~/sysmag/#hades";
+        nrs-hades = "sudo nixos-rebuild switch --flake ~/sysmag/#hades --option eval-cache false";
       };
       oh-my-zsh = {
         enable = true;
@@ -19,6 +19,4 @@
       };
     };
 
-    # Set zsh default
-    users.defaultUserShell = pkgs.zsh;
 }
