@@ -12,12 +12,11 @@
 
   outputs = { self, nixpkgs, ... } @ inputs: {
     nixosConfigurations.hades = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs;};
+      extraSpecialArgs = {inherit inputs;};
 
       modules = [
             # Home Manager
             inputs.home-manager.nixosModules.default
-            home/home.nix
             
             # Hardware scan
             host/hades/hardware-configuration.nix

@@ -1,6 +1,9 @@
-{ config, pkgs, ...}:
+{ config, pkgs, inputs, ...}:
 
 {
+    imports = [
+        inputs.home-manager.nixosModules.default
+    ];
     users.users.gaybe = {
         isNormalUser = true;
         description = "gaybe";
@@ -9,7 +12,7 @@
 
     home-manager = {
         extraSpecialArgs = { inherit inputs; };
-        users."gaybe" = import ../../home/home.nix
-    }
+        users."gaybe" = import ../../home/home.nix;
+    };
 
 }
