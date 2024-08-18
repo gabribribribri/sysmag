@@ -1,5 +1,6 @@
 { pkgs, config, inputs, ...}:
 {
+  xdg.enable = true;
   xdg.configFile = {
     "awesome".source = ./app/awesome;
     "btop".source = ./app/btop;

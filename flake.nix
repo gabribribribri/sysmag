@@ -15,9 +15,32 @@
       specialArgs = {inherit inputs;};
 
       modules = [
-        ./host/hades/all.nix
-        ./home/app.nix
-        inputs.home-manager.nixosModules.default
+            # Home Manager
+            inputs.home-manager.nixosModules.default
+            ./home/home.nix
+            
+            # Hardware scan
+            ./host/hades/hardware-configuration.nix
+
+            # Packages
+            ./host/hades/pkgs.nix
+
+            # Packages configuration
+            ./host/hades/pkgsconf.nix
+
+            # Other important things
+            ./host/hades/stuff.nix
+
+            # Include users configuration
+            host/common/users.nix
+
+
+            # Networking & Locales
+            ./host/hades/nw.nix
+
+            # Audio
+            ./host/hades/sound.nix
+
       ];
     };
   };
