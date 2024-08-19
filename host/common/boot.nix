@@ -12,6 +12,7 @@
          useOSProber = true;
          device = "nodev";
          theme = ../../home/app/grub-themes/Iofi;
+         fontSize = 24;
       };
     };
  
