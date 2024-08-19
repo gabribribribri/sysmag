@@ -436,7 +436,7 @@ globalkeys = mytable.join(
     { description = "Shutdown the computer", group = "launcher" }),
   -- Restart
   awful.key({ modkey, altkey }, "r", function() os.execute("reboot") end,
-    { description = "Restart the computer", group = "launcher" })
+   { description = "Restart the computer", group = "launcher" })
 
 )
 
@@ -732,10 +732,8 @@ tag.connect_signal("property::selected", backham)
 -- Keyboard init
 os.execute("$SYSMAG/global/kb/init_altgr-weur.sh")
 -- Monitor composition
-if os.getenv("HOST") == "astar" or os.getenv("HOST") == "hades" then
-  os.execute("$SYSMAG/global/mn/fatty.sh")
-end
+os.execute("$SYSMAG/global/mn/fatty.sh")
 -- Background
 os.execute("nitrogen --restore")
 -- Compositor
-os.execute("picom")
+os.execute("picom &")
