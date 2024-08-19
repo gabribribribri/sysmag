@@ -7,10 +7,6 @@
         ./bluetooth.nix
 
 
-        # Bootloader 
-        ./boot.nix
-
-
         # Networking
         ./network.nix
 
