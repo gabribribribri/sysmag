@@ -5,20 +5,13 @@
         xserver = {
             # Enable the X11 windowing system.
             enable = true;
-            videoDrivers = ["amdgpu"];
+            videoDrivers = [ "amdgpu" ];
 
-            # Enable AwesomeWM
-            windowManager.awesome = {
-                enable = true;
-                luaModules = with pkgs.luaPackages;[
-                    luarocks # is the package manager for Lua modules
-                    luadbi-mysql # Data base abstraction layer
-                ];
-            };
         };
 
 
         displayManager = {
+            defaultSession = "none+awesome";
             sddm = {
                 enable = true;
                 wayland.enable = true;

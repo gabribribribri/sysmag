@@ -27,8 +27,12 @@
         ./users.nix
 
 
-        # X, Xorg, Xserver, Xshit, .xinitrc...
-        ./xserver.nix
+        # Display Managers & Wayland & X11
+        ./dm.nix
+
+
+        # Desktop Environments & Window Managers
+        ./de.nix
 
 
         # All the other little things

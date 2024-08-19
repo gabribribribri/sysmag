@@ -13,7 +13,7 @@
         isNormalUser = true;
         description = "gaybe";
         useDefaultShell = true;
-        extraGroups = [ "networkmanager" "wheel" ];
+        extraGroups = [ "networkmanager" "wheel" "audio" ];
     };
 
     home-manager = {

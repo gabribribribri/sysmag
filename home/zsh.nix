@@ -10,7 +10,7 @@
         lg = "lazygit";
         qalc = "qalc -c";
         lsd = "lsd -lAg";
-        nrs-hades = "sudo nixos-rebuild switch --flake ~/sysmag/#hades";
+        nrs-hades = "sudo nixos-rebuild switch --flake ~/sysmag/#hades $1";
       };
       oh-my-zsh = {
         enable = true;
