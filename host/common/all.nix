@@ -19,10 +19,6 @@
         ./pkgs.nix
 
 
-        # Packages Configuration
-        ./pkgsconf.nix
-
-
         # Pipewire & Shit
         ./sound.nix
 
@@ -33,7 +29,6 @@
 
         # X, Xorg, Xserver, Xshit, .xinitrc...
         ./xserver.nix
-
 
 
         # All the other little things

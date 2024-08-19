@@ -4,9 +4,7 @@
 	environment.variables = rec {
     SYSMAG = "$HOME/sysmag";
 		EDITOR = "hx";
+		HOST = "$\{HOST\}";
   };
 
-	environment.sessionVariables = rec {
-		HOST = "$HOST";
-	};
 }
