@@ -20,6 +20,10 @@
             # All Commons.
             host/common/all.nix
 
+            # AMD Drivers
+            host/hades/drivers.nix
+            # Jupiter & Venus
+            host/hades/parts.nix
             # Hardware scan
             host/hades/hardware-configuration.nix
       ];

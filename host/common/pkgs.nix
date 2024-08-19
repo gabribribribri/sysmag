@@ -31,7 +31,7 @@
             baobab wget
             curl gparted
             libreoffice-qt
-            vlc
+            vlc xorg.xkbcomp
             libsForQt5.kfind
             libsForQt5.gwenview
             kdePackages.dolphin

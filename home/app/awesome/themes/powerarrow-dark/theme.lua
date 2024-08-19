@@ -343,6 +343,10 @@ function theme.at_screen_connect(s)
       host == "astar" and theme.volume.widget,
       host == "astar" and arrl_ld,
 
+      host == "hades" and volicon,
+      host == "hades" and theme.volume.widget,
+      host == "hades" and arrl_ld,
+
       host == "think" and arrl_ld,
       host == "think" and wibox.container.background(volicon, theme.bg_focus),
       host == "think" and wibox.container.background(theme.volume.widget, theme.bg_focus),

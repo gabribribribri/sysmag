@@ -722,9 +722,14 @@ client.connect_signal("unmanage", backham)
 -- ensure there is always a selected client during tag switching or logins
 tag.connect_signal("property::selected", backham)
 
--- Command lines
+--- Command lines ---
+-- Keyboard init
 os.execute("$SYSMAG/global/kb/init_altgr-weur.sh")
-if os.getenv("HOST") == "astar" then
+-- Monitor composition
+if os.getenv("HOST") == "astar" or os.getenv("HOST") == "hades" then
   os.execute("$SYSMAG/global/mn/fatty.sh")
 end
+-- Background
 os.execute("nitrogen --restore")
+-- Compositor
+os.execute("picom")

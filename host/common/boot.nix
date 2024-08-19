@@ -11,6 +11,7 @@
          efiSupport = true;
          useOSProber = true;
          device = "nodev";
+         theme = ../../home/app/grub-themes/Iofi;
       };
     };
  
