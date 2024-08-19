@@ -10,19 +10,19 @@ symApps=("helix" "awesome" "kitty" "rofi" "tmux" "picom" "clangd" "btop")
 
 for app in "${symApps[@]}"; do
   printf "Setting config for $app\n"
-  ln -sf $SYSMAG/home/app/$app $HOME/.config/
+  ln -sf $SYSMAG/app/$app $HOME/.config/
 done
 
 printf "Setting config for ZSH\n"
-ln -sf $SYSMAG/home/app/zsh/.zshrc $HOME/
+ln -sf $SYSMAG/app/zsh/.zshrc $HOME/
 
 printf "Setting config for X\n"
-ln -sf $SYSMAG/home/app/x/.xinitrc $HOME/
+ln -sf $SYSMAG/app/x/.xinitrc $HOME/
 
 printf "Setting config for clang-format\n"
-ln -sf $SYSMAG/home/app/clangd/.clang-format $HOME/
+ln -sf $SYSMAG/app/clangd/.clang-format $HOME/
 
 mkdir -p ~/.local/share/rofi
 printf "Setting config for rofi\n"
-ln -sf $SYSMAG/home/app/rofi/themes/ $HOME/.local/share/rofi/
+ln -sf $SYSMAG/app/rofi/themes/ $HOME/.local/share/rofi/
 

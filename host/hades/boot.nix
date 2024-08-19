@@ -12,7 +12,7 @@
         efiSupport = true;
         useOSProber = false;
         device = "nodev";
-        theme = ../../home/app/grub-themes/Iofi;
+        theme = ../../app/grub-themes/Iofi;
         fontSize = 32;
         extraEntries = ''
             menuentry 'Windows 10' --class windows --class os $menuentry_id_option 'osprober-efi-2E13-F711' {
