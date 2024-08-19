@@ -8,6 +8,7 @@
             git zsh kitty
             helix lazygit
             yazi zoxide lsd tree
+            nil
 
             # Classic Workflow
             firefox obsidian
