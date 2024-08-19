@@ -24,8 +24,11 @@
             host/hades/drivers.nix
             # Jupiter & Venus
             host/hades/parts.nix
+            # Bootloader Configuration
+            host/hades/boot.nix
             # Hardware scan
             host/hades/hardware-configuration.nix
+
       ];
     };
   };
