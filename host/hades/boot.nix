@@ -28,7 +28,7 @@
             	linux /boot/vmlinuz-6.6.46_1 root=UUID=870b72dc-aca1-49bf-b53c-e4273fb47d38 ro loglevel=4
             	initrd /boot/initramfs-6.6.46_1.img
             }
-        ''
+        '';
       };
     };
  
