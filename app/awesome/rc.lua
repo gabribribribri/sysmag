@@ -431,12 +431,15 @@ globalkeys = mytable.join(
     { description = "run rofi with modes window and drun ", group = "launcher" }),
   awful.key({ altkey }, "c", function() os.execute("rofi -show calc -modi calc -no-show-match -no-sort") end,
     { description = "run rofi with mode calc", group = "launcher" }),
-  -- Shutdown
-  awful.key({ modkey, altkey }, "s", function() os.execute("poweroff") end,
-    { description = "Shutdown the computer", group = "launcher" }),
+  -- Poweroff
+  awful.key({ modkey, altkey }, "p", function() os.execute("poweroff") end,
+    { description = "Poweroff the computer", group = "launcher" }),
   -- Restart
   awful.key({ modkey, altkey }, "r", function() os.execute("reboot") end,
-   { description = "Restart the computer", group = "launcher" })
+   { description = "Restart the computer", group = "launcher" }),
+  -- Restart
+  awful.key({ modkey, altkey }, "s", function() os.execute("systemctl suspend") end,
+   { description = "Sleep the computer", group = "launcher" })
 
 )
 
