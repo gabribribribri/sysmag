@@ -13,7 +13,7 @@
             firefox obsidian
 
             # Awesome WM pkgs
-            arandr nitrogen
+            arandr nitrogen picom
             rofi libqalculate rofi-calc
             awesome gnome-screenshot
             
