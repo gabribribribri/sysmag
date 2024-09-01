@@ -2,11 +2,18 @@
 If:
   PathMatch: '.*\.cpp'
   PathMatch: '.*\.hpp'
+  PathMatch: '.*\.mpp'
+  PathMatch: '.*\.cppm'
 CompileFlags:
-  # Add: ["-std=c++23", "-Weverything", "-stdlib=libc++", "-Wl,-rpath,/usr/lib"]
+  Add: ["-stdlib=libc++"]
+  Add: ["-std=c++23"]
   Add: ["-Wall", "-Wextra"]
-  # Add: ["-Weverything"]
+  Add: ["-Wl,-rpath,/usr/lib"]
+  Add: ["-fmodule-search-path"]
+  Add: ["-fmodules"]
   Compiler: clang++
 # Diagnostics:
-  # ClangTidy:
-    # Add: ['modernize-*', 'readability-*']
+#   ClangTidy:
+#     Add: ['modernize-*', 'readability-*']
+#     Remove: modernize-use-trailing-return-type
+

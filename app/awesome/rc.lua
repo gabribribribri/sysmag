@@ -430,7 +430,16 @@ globalkeys = mytable.join(
   awful.key({ altkey }, "space", function() os.execute("rofi -show combi -combi-modes \"window,drun\" -modes combi") end,
     { description = "run rofi with modes window and drun ", group = "launcher" }),
   awful.key({ altkey }, "c", function() os.execute("rofi -show calc -modi calc -no-show-match -no-sort") end,
-    { description = "run rofi with mode calc", group = "launcher" })
+    { description = "run rofi with mode calc", group = "launcher" }),
+  -- Poweroff
+  awful.key({ modkey, altkey }, "p", function() os.execute("poweroff") end,
+    { description = "Poweroff the computer", group = "launcher" }),
+  -- Restart
+  awful.key({ modkey, altkey }, "r", function() os.execute("reboot") end,
+   { description = "Restart the computer", group = "launcher" }),
+  -- Restart
+  awful.key({ modkey, altkey }, "s", function() os.execute("systemctl suspend") end,
+   { description = "Sleep the computer", group = "launcher" })
 
 )
 
@@ -722,9 +731,12 @@ client.connect_signal("unmanage", backham)
 -- ensure there is always a selected client during tag switching or logins
 tag.connect_signal("property::selected", backham)
 
--- Command lines
+--- Command lines ---
+-- Keyboard init
 os.execute("$SYSMAG/global/kb/init_altgr-weur.sh")
-if os.getenv("HOST") == "astar" then
-  os.execute("$SYSMAG/global/mn/fatty.sh")
-end
+-- Monitor composition
+os.execute("$SYSMAG/global/mn/fatty.sh")
+-- Background
 os.execute("nitrogen --restore")
+-- Compositor
+os.execute("picom &")
