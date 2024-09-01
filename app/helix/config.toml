@@ -1,4 +1,4 @@
-theme = "adwaita-dark"
+theme = "catppuccin_mocha"
 
 [editor]
 middle-click-paste = false
@@ -10,6 +10,9 @@ bufferline = "always"
 auto-completion = true
 auto-format = true
 auto-save = true
+indent-guides.render = true
+cursorline = true
+color-modes = true
 
 [editor.cursor-shape]
 insert = "bar"
@@ -19,6 +22,16 @@ select = "underline"
 [editor.file-picker]
 hidden = false
 
+[editor.statusline]
+left = ["mode","spacer", "version-control", "spinner", "file-name", "read-only-indicator", "file-modification-indicator"]
+right = ["diagnostics", "register", "primary-selection-length", "selections",  "position", "file-encoding"]
+mode.normal = "normal"
+mode.insert = "insert"
+mode.select = "select"
+
+[editor.lsp]
+display-signature-help-docs = false
+display-inlay-hints = true
 
 [keys.normal]
 up = "no_op"
