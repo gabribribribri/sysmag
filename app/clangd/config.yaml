@@ -5,12 +5,12 @@ If:
   PathMatch: '.*\.mpp'
   PathMatch: '.*\.cppm'
 CompileFlags:
-  Add: ["-stdlib=libc++"]
+  # Add: ["-stdlib=libc++"]
   Add: ["-std=c++23"]
   Add: ["-Wall", "-Wextra"]
-  Add: ["-Wl,-rpath,/usr/lib"]
-  Add: ["-fmodule-search-path"]
-  Add: ["-fmodules"]
+  # Add: ["-Wl,-rpath,/usr/lib"]
+  # Add: ["-fmodule-search-path"]
+  # Add: ["-fmodules"]
   Compiler: clang++
 # Diagnostics:
 #   ClangTidy:
