@@ -2,3 +2,4 @@ app/tmux/plugins
 app/btop/themes
 app/btop/btop.log
 app/helix/runtime
+flake.lock
