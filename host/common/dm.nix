@@ -15,7 +15,8 @@
             sddm = {
                 enable = true;
                 wayland.enable = true;
-                theme = "../../app/sddm-themes/Nordic-darker-Plasma-6";
+                # I would need to package the theme myself and that would be quite boring
+                # theme = "../../app/sddm-themes/Nordic-darker-Plasma-6";
             };
 	      };
     };
