@@ -19,14 +19,13 @@
         ags.url = "github:Aylur/ags";
     };
 
-    outputs = { self, nixpkgs, ... } @ inputs: {
+    outputs = { self, nixpkgs, home-manager, ... } @ inputs: {
         nixosConfigurations.hades = nixpkgs.lib.nixosSystem {
             specialArgs = {inherit inputs;};
+            pkgs = nixpkgs.legacyPackages.x86_64-linux;
             modules = [
                 # Home Manager
                 inputs.home-manager.nixosModules.default        
-                # AGS
-                inputs.ags.homeManagerModules.default
 
                 # All Commons.
                 host/common/all.nix
@@ -40,6 +39,8 @@
                 # Hardware scan
                 host/hades/hardware-configuration.nix
 
+                # AGS
+                inputs.ags.homeManagerModules.default
             ];
         };
     };
