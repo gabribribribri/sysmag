@@ -2,7 +2,7 @@ import { StatusBar } from "./statusbar.ts";
 import { AppLauncher } from "./applauncher.ts";
 
 App.config({
-    style: "./my-ags-widgets/style.css",
+    style: "./style.css",
     windows: [
         StatusBar(),
         AppLauncher()
