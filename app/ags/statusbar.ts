@@ -190,19 +190,17 @@ function Right() {
     })
 }
 
-export function StatusBar(monitor = 0) {
-    return Widget.Window({
-        name: `bar-${monitor}`, // name has to be unique
-        class_name: "bar",
-        monitor,
-        anchor: ["top", "left", "right"],
-        exclusivity: "exclusive",
-        child: Widget.CenterBox({
-            start_widget: Left(),
-            center_widget: Center(),
-            end_widget: Right(),
-        }),
-    })
-}
+export const StatusBar = (monitor = 0) => Widget.Window({
+    name: `bar-${monitor}`, // name has to be unique
+    class_name: "bar",
+    monitor,
+    anchor: ["top", "left", "right"],
+    exclusivity: "exclusive",
+    child: Widget.CenterBox({
+        start_widget: Left(),
+        center_widget: Center(),
+        end_widget: Right(),
+    }),
+});
 
 

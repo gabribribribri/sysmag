@@ -5,6 +5,6 @@ App.config({
     style: "./style.css",
     windows: [
         StatusBar(),
-        AppLauncher()
+        AppLauncher
     ]
 })
