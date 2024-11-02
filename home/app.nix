@@ -11,8 +11,9 @@
     "rofi".source = ../app/rofi;
   };
 
+  # gaybe username present here, so be careful to change the username !!!
   systemd.user.tmpfiles.rules = [
-    "L ${builtins.getEnv "HOME"}/.local/share/rofi/ - - - - ${builtins.getEnv "HOME"}/sysmag/app/rofi/themes"
+    "L /home/gaybe/.local/share/rofi/ - - - - /home/gaybe/sysmag/app/rofi/themes"
   ];
 
   programs.zoxide = {
