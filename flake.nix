@@ -10,13 +10,14 @@
         };
 
 
+        # Hyprland !!!
         hyprland.url = "github:hyprwm/Hyprland";
         hyprland-plugins = {
             url = "github:hyprwm/hyprland-plugins";
             inputs.hyprland.follows = "hyprland";
         };
 
-        # AGS BUGGY
+        # Aylur's Gtk Shell
         ags.url = "github:Aylur/ags";
     };
 

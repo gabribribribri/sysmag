@@ -19,7 +19,7 @@
             awesome gnome-screenshot
 
             # Hyprland pkgs
-            ags
+            swww
             
             # Languages
             python3
