@@ -11,6 +11,10 @@
     "rofi".source = ../app/rofi;
   };
 
+  systemd.user.tmpfiles.rules = [
+    "L ${builtins.getEnv "HOME"}/.local/share/rofi/ - - - - ${builtins.getEnv "HOME"}/sysmag/app/rofi/themes"
+  ];
+
   programs.zoxide = {
     enable = true;
     enableZshIntegration = true;

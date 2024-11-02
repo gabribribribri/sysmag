@@ -30,6 +30,7 @@
 
             # Reste
             baobab wget
+            pavucontrol
             curl gparted
             libreoffice-qt
             vlc xorg.xkbcomp
