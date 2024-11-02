@@ -1,5 +1,5 @@
-import { StatusBar } from "./my-ags-widgets/statusbar/statusbar.ts";
-import { AppLauncher } from "./my-ags-widgets/applauncher/applauncher.ts";
+import { StatusBar } from "./statusbar.ts";
+import { AppLauncher } from "./applauncher.ts";
 
 App.config({
     style: "./my-ags-widgets/style.css",
