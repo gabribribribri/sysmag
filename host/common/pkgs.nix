@@ -36,6 +36,8 @@
             vlc xorg.xkbcomp
             libsForQt5.kfind
             libsForQt5.gwenview
+            libsForQt5.qtstyleplugin-kvantum
+            libsForQt5.qt5ct
             kdePackages.dolphin
         ];
 
