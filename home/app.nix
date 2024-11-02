@@ -13,7 +13,7 @@
 
   # gaybe username present here, so be careful to change the username !!!
   systemd.user.tmpfiles.rules = [
-    "L /home/gaybe/.local/share/rofi/ - - - - /home/gaybe/sysmag/app/rofi/themes"
+    "L /home/gaybe/.local/share/rofi/themes - - - - /home/gaybe/sysmag/app/rofi/themes"
   ];
 
   programs.zoxide = {
