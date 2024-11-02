@@ -13,6 +13,7 @@
         bind = [
             "$mod, Q, exec, firefox"
             "$mod, Return, exec, kitty"
+            "$mod, Del, exit"
         ];
     };
 }
