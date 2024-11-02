@@ -17,12 +17,16 @@
             arandr nitrogen picom
             rofi libqalculate rofi-calc
             awesome gnome-screenshot
+
+            # Hyprland pkgs
+            ags
             
             # Languages
             python3
             rustc cargo rust-analyzer
             dart lua-language-server 
             clang-tools_16
+            bun
 
             # Showing off
             htop cmatrix

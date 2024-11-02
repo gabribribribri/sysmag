@@ -10,10 +10,15 @@
 
     wayland.windowManager.hyprland.settings = {
         "$mod" = "SUPER";
+
+        exec = [
+            "ags"
+        ];
+        
         bind = [
             "$mod, Q, exec, firefox"
-            "$mod, Return, exec, kitty"
-            "$mod, Del, exit"
+            "$mod, return, exec, kitty"
+            "$mod, delete, exit"
         ];
     };
 }

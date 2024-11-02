@@ -15,6 +15,8 @@
             url = "github:hyprwm/hyprland-plugins";
             inputs.hyprland.follows = "hyprland";
         };
+
+        ags.url = "github:Aylur/ags";
     };
 
     outputs = { self, nixpkgs, ... } @ inputs: {
@@ -23,6 +25,8 @@
             modules = [
                 # Home Manager
                 inputs.home-manager.nixosModules.default        
+                # AGS
+                inputs.ags.homeManagerModules.default
 
                 # All Commons.
                 host/common/all.nix
