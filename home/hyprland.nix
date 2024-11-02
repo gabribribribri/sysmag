@@ -8,14 +8,19 @@
         ];
     };
 
-    wayland.windowManager.hyprland.settings = {
+    wayland.windowManager.hyprland.settings =
+    let
+        startupScript = pkgs.pkgs.writeSheelScriptBin "start" ''
+            ags &
+            swww-daemon &
+            sleep 1
+            swww img -o DP-1 ${~/sysmag/global/bg/sunset-guard-tomer.jpeg} &
+        '';
+    in
+    {
         "$mod" = "SUPER";
 
-        exec = [
-            "ags"
-            "swww-deamon"
-            "swww img -o DP-1 ~/sysmag/global/bg/sunset-guard-tower.jpeg"
-        ];
+        exec-once = ''${startupScript}/bin/start'';
 
         monitor = [
             #monitor  resolution         position  scale  transform  (value)
