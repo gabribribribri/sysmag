@@ -1,5 +1,5 @@
 
-{ pkgs, config, ...} :
+{ pkgs, inputs, ...} :
 
 {
     services = {
@@ -14,4 +14,8 @@
         
     };
 
+    programs.hyprland = {
+        enable = true;
+        package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+    };
 }

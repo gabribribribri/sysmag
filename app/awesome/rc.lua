@@ -18,7 +18,7 @@ local wibox         = require("wibox")
 local beautiful     = require("beautiful")
 local naughty       = require("naughty")
 local lain          = require("lain")
-local hotkeys_popup = require("awful.hotkeys_popup").widget.new({ width = 950, height = 600 }) -- modified to be 950x600
+local hotkeys_popup = require("awful.hotkeys_popup").widget.new({ width = 1000, height = 720 }) -- modified to be 1000x720
 local mytable       = awful.util.table or gears.table
 
 

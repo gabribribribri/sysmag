@@ -11,7 +11,7 @@
     "rofi".source = ../app/rofi;
   };
 
-  # gaybe username present here, so be careful to change the username !!!
+  # gaybe username present here, so be careful when changing the username !!!
   systemd.user.tmpfiles.rules = [
     "L /home/gaybe/.local/share/rofi/themes - - - - /home/gaybe/sysmag/app/rofi/themes"
   ];
