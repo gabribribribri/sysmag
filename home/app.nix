@@ -9,6 +9,7 @@
     "kitty".source = ../app/kitty;
     "picom".source = ../app/picom;
     "rofi".source = ../app/rofi;
+    "ags".source = ../app/ags;
   };
 
   # gaybe username present here, so be careful when changing the username !!!

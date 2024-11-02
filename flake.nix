@@ -16,13 +16,14 @@
             inputs.hyprland.follows = "hyprland";
         };
 
+        # AGS BUGGY
         ags.url = "github:Aylur/ags";
     };
 
-    outputs = { self, nixpkgs, home-manager, ... } @ inputs: {
+    outputs = { self, nixpkgs, home-manager, ags, ... } @ inputs:
+        {
         nixosConfigurations.hades = nixpkgs.lib.nixosSystem {
             specialArgs = {inherit inputs;};
-            pkgs = nixpkgs.legacyPackages.x86_64-linux;
             modules = [
                 # Home Manager
                 inputs.home-manager.nixosModules.default        
@@ -39,8 +40,8 @@
                 # Hardware scan
                 host/hades/hardware-configuration.nix
 
-                # AGS
-                inputs.ags.homeManagerModules.default
+                # AGS BUGGY
+                # inputs.ags.homeManagerModules.default
             ];
         };
     };
