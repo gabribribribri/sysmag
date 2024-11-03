@@ -34,6 +34,8 @@
     in
     {
         "$mod" = "SUPER";
+        "$alt" = "ALT";
+        "$ctrl" = "CTRL";
 
         exec-once = ''${startupScript}/bin/start'';
 
@@ -47,12 +49,14 @@
             ## Launch programms ##
             "$mod, Q, exec, firefox"
             "$mod, return, exec, kitty"
-            "ALT, space, exec, ags -t applauncher"
+            "$alt, space, exec, ags -t applauncher"
+
 
             ## Quit, Restart, Shutdown ##
             "$mod, delete, exit"
             "$mod, return, forcerendererreload"
             "$mod, C, killactive"
+
 
             ## Workspaces ##
             "$mod, 6, workspace, 1"
@@ -60,11 +64,12 @@
             "$mod, 8, workspace, 3"
             "$mod, 9, workspace, 4"
             "$mod, 0, workspace, 5"
-            "$mod+ALT, 6, movetoworkspace, 1"
-            "$mod+ALT, 7, movetoworkspace, 2"
-            "$mod+ALT, 8, movetoworkspace, 3"
-            "$mod+ALT, 9, movetoworkspace, 4"
-            "$mod+ALT, 0, movetoworkspace, 5"
+            "$mod+$alt, 6, movetoworkspace, 1"
+            "$mod+$alt, 7, movetoworkspace, 2"
+            "$mod+$alt, 8, movetoworkspace, 3"
+            "$mod+$alt, 9, movetoworkspace, 4"
+            "$mod+$alt, 0, movetoworkspace, 5"
+
 
             ## Switch Between Windows ##
             "$mod, H, movefocus, l"
@@ -75,21 +80,29 @@
             "$mod, U, focusmonitor, +1"
             "$mod, I, focusmonitor, -1"
 
+
             ## Manipulate Windows ##
             "$mod, S, exec, ${switchGaps}/bin/out"
             "$mod, F, fullscreen, 0"
             "$mod, M, fullscreen, 1"
             "$mod, space, togglefloating"
             "$mod, G, centerwindow"
+            "$mod, V, pin"
                         
-            "$mod+ALT, H, swapwindow, l"
-            "$mod+ALT, J, swapwindow, d"
-            "$mod+ALT, K, swapwindow, u"
-            "$mod+ALT, L, swapwindow, r"
+            "$mod+$alt, H, swapwindow, l"
+            "$mod+$alt, J, swapwindow, d"
+            "$mod+$alt, K, swapwindow, u"
+            "$mod+$alt, L, swapwindow, r"
 
-            "$mod+ALT, U, movewindow, mon:+1"
-            "$mod+ALT, I, movewindow, mon:-1"
-            
+            "$mod+$alt, U, movewindow, mon:+1"
+            "$mod+$alt, I, movewindow, mon:-1"
+        ];
+
+        bindr = [
+            "$mod+$ctrl, H, resizeactive, -50 0"
+            "$mod+$ctrl, J, resizeactive, 0 -50"
+            "$mod+$ctrl, K, resizeactive, 0 50"
+            "$mod+$ctrl, L, resizeactive, 50 0"
         ];
 
         bindm = [
@@ -106,5 +119,18 @@
         decoration = {
             rounding = rounding;
         };
+
+        # bezier = [
+        #     "easeOutQuart, 0.25, 1, 0.5, 1"
+        #     "easeOutCubic, 0.33, 1, 0.68, 1"
+        #     "easeOutBack,  0.175, 0.885, 0.62, 1.275"
+        # ];
+
+        # animation = [
+        #     "workspaces, 1, 6, easeOutBack"
+        #     "windows, 1, 6, easeOutBack"
+        #     "fade, 1, 7, easeOutQuart"
+        #     "borderangle, 1, 8, easeOutCubic"
+        # ];
     };
 }
