@@ -39,6 +39,8 @@
 
         exec-once = ''${startupScript}/bin/start'';
 
+        env = "HYPRCURSOR_THEME, rose-pine-hyprcursor";
+
         monitor = [
             #monitor  resolution         position  scale  transform  (value)
             "DP-1,    1920x1080@164.92,  1080x0,   1,     transform, 0"
@@ -96,6 +98,11 @@
 
             "$mod+$alt, U, movewindow, mon:+1"
             "$mod+$alt, I, movewindow, mon:-1"
+
+            ## Multimedia manipulation
+            "$alt, W, exec, playerctl play-pause"
+            "$alt, B, exec, playerctl previous"
+            "$alt, Nm exec, playerctl next"
         ];
 
         bindr = [

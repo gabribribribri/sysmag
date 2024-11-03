@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{inputs, pkgs, config, ... }:
 
 {
     environment.systemPackages = with pkgs;
@@ -20,13 +20,15 @@
 
             # Hyprland pkgs
             swww
+            inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
             
             # Languages
             python3
             rustc cargo rust-analyzer
             dart lua-language-server 
             clang-tools_16
-            bun
+            bun typescript
+            nodePackages.typescript-language-server
 
             # Showing off
             htop cmatrix

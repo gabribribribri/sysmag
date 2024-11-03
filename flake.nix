@@ -19,6 +19,9 @@
 
         # Aylur's Gtk Shell
         ags.url = "github:Aylur/ags";
+
+        # Hyprland Hyprcursor
+        rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
     };
 
     outputs = { self, nixpkgs, home-manager, ags, ... } @ inputs:
