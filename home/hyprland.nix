@@ -102,7 +102,7 @@
             ## Multimedia manipulation
             "$alt, W, exec, playerctl play-pause"
             "$alt, B, exec, playerctl previous"
-            "$alt, Nm exec, playerctl next"
+            "$alt, N, exec, playerctl next"
         ];
 
         bindr = [
