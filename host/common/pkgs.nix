@@ -8,7 +8,7 @@
             git zsh kitty
             helix lazygit
             yazi zoxide lsd tree
-            nil
+            nil xmake
 
             # Classic Workflow
             firefox obsidian
