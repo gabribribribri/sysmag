@@ -44,8 +44,6 @@
                 # Hardware scan
                 host/hades/hardware-configuration.nix
 
-                # AGS BUGGY
-                # inputs.ags.homeManagerModules.default
             ];
         };
     };

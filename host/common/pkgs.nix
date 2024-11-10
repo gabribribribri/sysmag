@@ -19,7 +19,7 @@
             awesome gnome-screenshot
 
             # Hyprland pkgs
-            swww
+            swww waybar
             inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
             
             # Languages

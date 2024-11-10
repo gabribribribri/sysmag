@@ -10,6 +10,7 @@
     "picom".source = ../app/picom;
     "rofi".source = ../app/rofi;
     "ags".source = ../app/ags;
+    "waybar".source = ../app/waybar;
   };
 
   # gaybe username present here, so be careful when changing the username !!!

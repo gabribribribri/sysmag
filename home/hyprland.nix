@@ -11,10 +11,11 @@
     wayland.windowManager.hyprland.settings =
     let
         gapsIn = "10";
-        gapsOut = "25";
+        gapsOut = "22";
         rounding = "13";
         startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
-            ags &
+            # ags &
+            waybar &
             swww-daemon &
             sleep 1
             swww img -o DP-1 ${builtins.getEnv "SYSMAG"}/global/bg/sunset-guard-tomer.jpeg &
@@ -46,6 +47,19 @@
             "DP-1,    1920x1080@164.92,  1080x0,   1,     transform, 0"
             "DP-2,    1920x1080@143.85,  0x-420,   1,     transform, 3"
         ];
+
+        workspace = [
+            "1,  monitor:DP-2, default:true"
+            "2,  monitor:DP-2"
+            "3,  monitor:DP-2"
+            "4,  monitor:DP-2"
+            "5,  monitor:DP-2"
+            "6,  monitor:DP-1, default:true"
+            "7,  monitor:DP-1"
+            "8,  monitor:DP-1"
+            "9,  monitor:DP-1"
+            "10, monitor:DP-1"
+        ];
         
         bind = [
             ## Launch programms ##
@@ -61,16 +75,26 @@
 
 
             ## Workspaces ##
-            "$mod, 6, workspace, 1"
-            "$mod, 7, workspace, 2"
-            "$mod, 8, workspace, 3"
-            "$mod, 9, workspace, 4"
-            "$mod, 0, workspace, 5"
-            "$mod+$alt, 6, movetoworkspace, 1"
-            "$mod+$alt, 7, movetoworkspace, 2"
-            "$mod+$alt, 8, movetoworkspace, 3"
-            "$mod+$alt, 9, movetoworkspace, 4"
-            "$mod+$alt, 0, movetoworkspace, 5"
+            "$mod, 1, workspace, 1"
+            "$mod, 2, workspace, 2"
+            "$mod, 3, workspace, 3"
+            "$mod, 4, workspace, 4"
+            "$mod, 5, workspace, 5"
+            "$mod, 6, workspace, 6"
+            "$mod, 7, workspace, 7"
+            "$mod, 8, workspace, 8"
+            "$mod, 9, workspace, 9"
+            "$mod, 0, workspace, 10"
+            "$mod+$alt, 1, movetoworkspace, 1"
+            "$mod+$alt, 2, movetoworkspace, 2"
+            "$mod+$alt, 3, movetoworkspace, 3"
+            "$mod+$alt, 4, movetoworkspace, 4"
+            "$mod+$alt, 5, movetoworkspace, 5"
+            "$mod+$alt, 6, movetoworkspace, 6"
+            "$mod+$alt, 7, movetoworkspace, 7"
+            "$mod+$alt, 8, movetoworkspace, 8"
+            "$mod+$alt, 9, movetoworkspace, 9"
+            "$mod+$alt, 0, movetoworkspace, 10"
 
 
             ## Switch Between Windows ##
