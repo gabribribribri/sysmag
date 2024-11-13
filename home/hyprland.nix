@@ -26,10 +26,12 @@
                 hyprctl keyword general:gaps_in 0
                 hyprctl keyword general:gaps_out 0
                 hyprctl keyword decoration:rounding 0
+                hyprctl keyword windowrulev2 noborder on, onworkspace:w[t1]
             else
                 hyprctl keyword general:gaps_in ${gapsIn}
                 hyprctl keyword general:gaps_out ${gapsOut}
                 hyprctl keyword decoration:rounding ${rounding}
+                hyprctl keyword windowrulev2 noborder off, onworkspace:w[t1]
             fi
         '';
     in
@@ -60,6 +62,11 @@
             "9,  monitor:DP-1"
             "10, monitor:DP-1"
         ];
+
+        windowrulev2 = [
+            "noborder, onworkspace:w[t1]"
+        ];
+
         
         bind = [
             ## Launch programms ##
