@@ -14,7 +14,6 @@
         gapsOut = "22";
         rounding = "13";
         startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
-            # ags &
             waybar &
             swww-daemon &
             sleep 1

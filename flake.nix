@@ -17,14 +17,11 @@
             inputs.hyprland.follows = "hyprland";
         };
 
-        # Aylur's Gtk Shell
-        ags.url = "github:Aylur/ags";
-
         # Hyprland Hyprcursor
         rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
     };
 
-    outputs = { self, nixpkgs, home-manager, ags, ... } @ inputs:
+    outputs = { self, nixpkgs, home-manager, ... } @ inputs:
         {
         nixosConfigurations.hades = nixpkgs.lib.nixosSystem {
             specialArgs = {inherit inputs;};
