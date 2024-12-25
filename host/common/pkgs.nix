@@ -44,9 +44,4 @@
             libsForQt5.gwenview
             kdePackages.dolphin
         ];
-
-    fonts.packages = with pkgs;
-        [
-            (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
-        ];
 }
