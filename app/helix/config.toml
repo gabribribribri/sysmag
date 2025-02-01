@@ -11,6 +11,7 @@ auto-completion = true
 indent-guides.render = true
 cursorline = true
 color-modes = true
+end-of-line-diagnostics = "hint"
 
 [editor.auto-save]
 focus-lost = true
@@ -35,6 +36,10 @@ mode.select = "select"
 [editor.lsp]
 display-signature-help-docs = false
 display-inlay-hints = true
+
+[editor.inline-diagnostics]
+other-lines = "error"
+cursor-line = "error"
 
 [keys.normal]
 up = "no_op"
