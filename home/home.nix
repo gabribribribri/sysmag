@@ -18,6 +18,7 @@
 
   home.packages = with pkgs;
   [
+    appflowy
   ];
 
   # Let Home Manager install and manage itself.
