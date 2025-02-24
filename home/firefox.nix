@@ -12,6 +12,7 @@
         "browser.toolbars.bookmarks.visibility" = "never";
         "extensions.pocket.enabled" = false;
         "privacy.trackingprotection.enabled" = true;
+        "toolkit.telemetry.enabled" = false;
       };
     };
   };
