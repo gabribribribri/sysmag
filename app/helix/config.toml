@@ -38,8 +38,7 @@ display-signature-help-docs = false
 display-inlay-hints = true
 
 [editor.inline-diagnostics]
-other-lines = "error"
-cursor-line = "error"
+cursor-line = "hint"
 
 [keys.normal]
 up = "no_op"
