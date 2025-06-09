@@ -4,6 +4,7 @@ export SYSMAG="$HOME/sysmag"
 export EDITOR="/usr/bin/hx"
 export HOST=$HOST
 export QT_QPA_PLATFORMTHEME="qt6ct"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 
 # Highlighters
