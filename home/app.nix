@@ -9,7 +9,7 @@
     # "picom".source = ../app/picom
     # "rofi".source = ../app/rofi
     # "ags".source = ../app/ags
-    "helix".source = ../app/helix;
+    # "helix".source = ../app/helix; # Now managed by helix.nix
     "waybar".source = ../app/waybar;
   };
 

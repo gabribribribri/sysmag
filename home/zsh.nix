@@ -10,7 +10,7 @@
         "match_prev_cmd"
         "history"
       ];
-      enableBashCompletion = true;
+      # enableBashCompletion = true;
       syntaxHighlighting.enable = true;
       syntaxHighlighting.highlighters = [
         "main"

@@ -7,6 +7,7 @@
     ./librewolf.nix
     ./git.nix
     ./hyprland.nix
+    ./helix.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -17,6 +18,8 @@
 
   home.packages = with pkgs;
   [
+    nixd
+    nil
   ];
 
   # Let Home Manager install and manage itself.
