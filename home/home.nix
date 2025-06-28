@@ -7,7 +7,6 @@
     ./librewolf.nix
     ./git.nix
     ./hyprland.nix
-    # ./ags.nix # AGS BUGGY
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
