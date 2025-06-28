@@ -2,6 +2,13 @@
 {
   xdg.enable = true;
   xdg.configFile = {
+    # "awesome".source = ../app/awesome;
+    # "btop".source = ../app/btop
+    # "clangd".source = ../app/clangd
+    # "kitty".source = ../app/kitty
+    # "picom".source = ../app/picom
+    # "rofi".source = ../app/rofi
+    # "ags".source = ../app/ags
     "helix".source = ../app/helix;
     "waybar".source = ../app/waybar;
   };
