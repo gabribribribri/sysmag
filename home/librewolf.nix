@@ -1,10 +1,16 @@
-{ config, pkgs, ... } :
+{ config, pkgs, firefox-addons, ... } :
 {
   programs.librewolf = {
     enable = true;
     profiles.gaybe = {
       name = "Gaybe's Config";
       isDefault = true;
+      extensions.packages = with firefox-addons.packages.${pkgs.system}; [
+        ublock-origin
+        darkreader
+        i-dont-care-about-cookies
+        sponsorblock
+      ];
       settings = {
         # Old Firefox stuff, don't know if necessary with librewolf anymore
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
