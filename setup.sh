@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+printf "THIS HAS BEEN DEPRECATED, IT WOULD BE COOL NOT TO USE IT\n"
+
 SYSMAG=$HOME/sysmag
 
 # link documents to doc
