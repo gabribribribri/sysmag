@@ -4,7 +4,7 @@
   imports = [
     ./app.nix
     ./zsh.nix
-    ./firefox.nix
+    ./librewolf.nix
     ./git.nix
     ./hyprland.nix
     # ./ags.nix # AGS BUGGY
